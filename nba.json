@@ -1,0 +1,224 @@
+{
+    "media": {
+        "img": {
+            "league": {
+                "logo": "https://stats.nba.com/media/img/league/nba-logoman.svg",
+                "east": "https://sportsfly.cbsistatic.com/fly-825/bundles/sportsmediacss/images/team-logos/nba/alt/light/EAS.svg",
+                "west": "https://sportsfly.cbsistatic.com/fly-825/bundles/sportsmediacss/images/team-logos/nba/alt/light/WES.svg"  
+            },
+
+            "team" : {
+                "logo" : {
+                    "ATL": "https://stats.nba.com/media/img/teams/logos/ATL_logo.svg",
+                    "BOS": "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg",
+                    "BKN": "https://stats.nba.com/media/img/teams/logos/BKN_logo.svg",
+                    "CHA": "https://stats.nba.com/media/img/teams/logos/CHA_logo.svg",
+                    "CHI": "https://stats.nba.com/media/img/teams/logos/CHI_logo.svg",
+                    "CLE": "https://stats.nba.com/media/img/teams/logos/CLE_logo.svg",
+                    "DAL": "https://stats.nba.com/media/img/teams/logos/DAL_logo.svg",
+                    "DEN": "https://stats.nba.com/media/img/teams/logos/DEN_logo.svg",
+                    "DET": "https://stats.nba.com/media/img/teams/logos/DET_logo.svg",
+                    "GSW": "https://stats.nba.com/media/img/teams/logos/GSW_logo.svg",
+                    "HOU": "https://stats.nba.com/media/img/teams/logos/HOU_logo.svg",
+                    "IND": "https://stats.nba.com/media/img/teams/logos/IND_logo.svg",
+                    "LAC": "https://stats.nba.com/media/img/teams/logos/LAC_logo.svg",
+                    "LAL": "https://stats.nba.com/media/img/teams/logos/LAL_logo.svg",
+                    "MEM": "https://stats.nba.com/media/img/teams/logos/MEM_logo.svg",
+                    "MIA": "https://stats.nba.com/media/img/teams/logos/MIA_logo.svg",
+                    "MIL": "https://stats.nba.com/media/img/teams/logos/MIL_logo.svg",
+                    "MIN": "https://stats.nba.com/media/img/teams/logos/MIN_logo.svg",
+                    "NOP": "https://stats.nba.com/media/img/teams/logos/NOP_logo.svg",
+                    "NYK": "https://stats.nba.com/media/img/teams/logos/NYK_logo.svg",
+                    "OKC": "https://stats.nba.com/media/img/teams/logos/OKC_logo.svg",
+                    "ORL": "https://stats.nba.com/media/img/teams/logos/ORL_logo.svg",
+                    "PHI": "https://stats.nba.com/media/img/teams/logos/PHI_logo.svg",
+                    "PHX": "https://stats.nba.com/media/img/teams/logos/PHX_logo.svg",
+                    "POR": "https://stats.nba.com/media/img/teams/logos/POR_logo.svg",
+                    "SAC": "https://stats.nba.com/media/img/teams/logos/SAC_logo.svg",
+                    "SAS": "https://stats.nba.com/media/img/teams/logos/SAS_logo.svg",
+                    "TOR": "https://stats.nba.com/media/img/teams/logos/TOR_logo.svg",
+                    "UTA": "https://stats.nba.com/media/img/teams/logos/UTA_logo.svg",
+                    "WAS": "https://stats.nba.com/media/img/teams/logos/WAS_logo.svg"
+                }
+            }
+        }
+        
+    },
+    "team":[
+    {
+        "ATL":{
+            "season-record": "24-58",
+            "east-ranking" : "15",
+            "player":[
+            
+                {
+                    "name": "Dennis Schroder",
+                    "position": "PG",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203471.png", 
+                    "stats":[
+                    {
+                        "PTS": 19.4,
+                        "AST": 6.2,
+                        "REB": 3.1,
+                        "STL": 1.1,
+                        "BLK": 0.1
+                    }
+                ]
+            },
+                
+                {
+                    "name" : "Kent Bazemore",
+                    "position": "SG",
+                    "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203145.png",
+                    "stats":[
+                    {
+                        "PTS": 12.9,
+                        "AST": 3.5,
+                        "REB": 3.8,
+                        "STL": 1.5,
+                        "BLK": 0.7
+                    }
+                ]
+            },
+                {
+                    "name": "Taurean Prince",
+                    "position": "SF",
+                    "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/1627752.png",
+                    "stats":[
+                    {
+                        "PTS": 14.1,
+                        "AST": 2.6,
+                        "REB": 4.7,
+                        "STL": 0.5,
+                        "BLK": 2.0
+                    }
+                ]
+                },
+                {
+                    "name": "Ersan Ilyasova",
+                    "position": "PF",
+                    "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/101141.png",
+                    "stats":[
+                    {
+                        "PTS": 10.9,
+                        "AST": 1.1,
+                        "REB": 5.5,
+                        "STL": 1.0,
+                        "BLK": 0.4
+                    }
+                ]
+                },
+                {
+                    "name": "Miles Plumlee",
+                    "position": "C",
+                    "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203101.png",
+                    "stats":[
+                    {
+                        "PTS": 4.3,
+                        "AST": 0.8,
+                        "REB": 4.1,
+                        "STL": 0.3,
+                        "BLK": 0.5
+                    }
+                ]
+                }
+
+        
+    ]
+
+                
+            
+
+        },
+        "BOS":{
+
+        },
+        "BKN":{
+
+        },
+        "CHA":{
+
+        },
+        "CHI":{
+
+        },
+        "CLE":{
+
+        },
+        "DAL":{
+
+        },
+        "DEN":{
+
+        },
+        "DET":{
+
+        },
+        "GSW":{
+
+        },
+        "HOU":{
+
+        },
+        "IND":{
+
+        },
+        "LAC":{
+
+        },
+        "LAL":{
+
+        },
+        "MEM":{
+
+        },
+        "MIA":{
+
+        },
+        "MIL":{
+
+        },
+        "MIN":{
+
+        },
+        "NOP":{
+
+        },
+        "NYK":{
+
+        },
+        "OKC":{
+
+        },
+        "ORL":{
+
+        },
+        "PHI":{
+
+        },
+        "PHX":{
+
+        },
+        "POR":{
+
+        },
+        "SAC":{
+
+        },
+        "SAS":{
+
+        },
+        "TOR":{
+
+        },
+        "UTA":{
+
+        },
+        "WAS":{
+
+        }
+    }
+]
+
+}
+
