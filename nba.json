@@ -7,8 +7,8 @@
                 "west": "https://sportsfly.cbsistatic.com/fly-825/bundles/sportsmediacss/images/team-logos/nba/alt/light/WES.svg"  
             },
 
-            "team" : {
-                "logo" : {
+            "teams" : {
+                "logos" : {
                     "ATL": "https://stats.nba.com/media/img/teams/logos/ATL_logo.svg",
                     "BOS": "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg",
                     "BKN": "https://stats.nba.com/media/img/teams/logos/BKN_logo.svg",
@@ -44,14 +44,16 @@
         }
         
     },
-    "team":
+    "teams":[
     {
-        "ATL":{
+        
+            "name": "Atlanta Hawks",
             "season-record": "24-58",
             "east-ranking" : "15",
-            "player":[
+            "players":[
             
                 {
+                    "nationality": "Germany",
                     "name": "Dennis Schroder",
                     "position": "PG",
                     "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203471.png", 
@@ -124,12 +126,12 @@
                 }
 
         
-    ]
+    ],
 
                 
             
 
-        },
+        
         "BOS":{
 
         },
@@ -218,7 +220,7 @@
 
         }
     }
-
+]
 
 }
 
