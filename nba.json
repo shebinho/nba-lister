@@ -44,183 +44,211 @@
         }
         
     },
+
     "teams":[
-    {
-        
+        {
             "name": "Atlanta Hawks",
             "season-record": "24-58",
             "east-ranking" : "15",
-            "players":[
-            
+            "players" : [
                 {
                     "nationality": "Germany",
                     "name": "Dennis Schroder",
                     "position": "PG",
-                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203471.png", 
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203471.png",
                     "stats":[
-                    {
-                        "PTS": 19.4,
-                        "AST": 6.2,
-                        "REB": 3.1,
-                        "STL": 1.1,
-                        "BLK": 0.1
-                    }
-                ]
-            },
-                
+                        {
+                            "PTS": 19.4,
+                            "AST": 6.2,
+                            "REB": 3.1,
+                            "STL": 1.1,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
                 {
-                    "name" : "Kent Bazemore",
+                    "nationality": "USA",
+                    "name": "Kent Bazemore",
                     "position": "SG",
-                    "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203145.png",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203145.png",
                     "stats":[
-                    {
-                        "PTS": 12.9,
-                        "AST": 3.5,
-                        "REB": 3.8,
-                        "STL": 1.5,
-                        "BLK": 0.7
-                    }
-                ]
-            },
+                        {
+                            "PTS": 12.9,
+                            "AST": 3.5,
+                            "REB": 3.8,
+                            "STL": 1.5,
+                            "BLK": 0.7
+                        }
+                    ]
+                },
+
                 {
+                    "nationality": "USA",
                     "name": "Taurean Prince",
                     "position": "SF",
                     "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/1627752.png",
                     "stats":[
-                    {
-                        "PTS": 14.1,
-                        "AST": 2.6,
-                        "REB": 4.7,
-                        "STL": 0.5,
-                        "BLK": 2.0
-                    }
-                ]
+                        {
+                            "PTS": 14.1,
+                            "AST": 2.6,
+                            "REB": 4.7,
+                            "STL": 0.5,
+                            "BLK": 2.0
+                        }
+                    ]
                 },
+
                 {
+                    "nationality": "Turkey",
                     "name": "Ersan Ilyasova",
                     "position": "PF",
                     "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/101141.png",
                     "stats":[
-                    {
-                        "PTS": 10.9,
-                        "AST": 1.1,
-                        "REB": 5.5,
-                        "STL": 1.0,
-                        "BLK": 0.4
-                    }
-                ]
+                        {
+                            "PTS": 10.9,
+                            "AST": 1.1,
+                            "REB": 5.5,
+                            "STL": 1.0,
+                            "BLK": 0.4
+                        }
+                    ]
                 },
+
                 {
+                    "nationality": "USA",
                     "name": "Miles Plumlee",
                     "position": "C",
                     "img" : "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203101.png",
                     "stats":[
-                    {
-                        "PTS": 4.3,
-                        "AST": 0.8,
-                        "REB": 4.1,
-                        "STL": 0.3,
-                        "BLK": 0.5
-                    }
-                ]
+                        {
+                            "PTS": 4.3,
+                            "AST": 0.8,
+                            "REB": 4.1,
+                            "STL": 0.3,
+                            "BLK": 0.5
+                        }
+                    ]
                 }
 
-        
-    ],
+            ]
 
-                
+        },
+        
+        {
+            "name": "Boston Celtics"
+        },
+        
+        {
+            "name": "Brooklyn Nets"
+        },
             
-
+        {
+            "name": "Charlotte Hornets"
+        },
         
-        "BOS":{
-
+        {
+            "name": "Chicago Bulls"
         },
-        "BKN":{
-
+        
+        {
+            "name": "Cleveland Cavaliers"
         },
-        "CHA":{
-
+        
+        {
+            "name": "Dallas Mavericks"
         },
-        "CHI":{
-
+        
+        {
+            "name": "Denver Nuggets"
         },
-        "CLE":{
-
+        
+        {
+            "name": "Detroit Pistons"
         },
-        "DAL":{
-
+        
+        {
+            "name": "Golden State Warriors"
         },
-        "DEN":{
-
+        
+        {
+            "name": "Houston Rockets"
         },
-        "DET":{
-
+        
+        {
+            "name": "Indiana Pacers"
         },
-        "GSW":{
-
+        
+        {
+            "name": "Los Angeles Clippers"
         },
-        "HOU":{
-
+        
+        {
+            "name": "Los Angeles Lakers"
         },
-        "IND":{
-
+        
+        {
+            "name": "Memphis Grizzlies"
         },
-        "LAC":{
-
+        
+        {
+            "name": "Miami Heat"
         },
-        "LAL":{
-
+        
+        {
+            "name": "Milwaukee Bucks"
         },
-        "MEM":{
-
+        
+        {
+            "name": "Minnesota Timberwolves"
         },
-        "MIA":{
-
+        
+        {
+            "name": "New Orleans Pelicans"
         },
-        "MIL":{
-
+        
+        {
+            "name": "New York Knicks"
         },
-        "MIN":{
-
+        
+        {
+            "name": "Oklahoma City Thunder"
         },
-        "NOP":{
-
+        
+        {
+            "name": "Orlando Magic"
         },
-        "NYK":{
-
+        
+        {
+            "name": "Philadelphia 76ers" 
         },
-        "OKC":{
-
+        
+        {
+            "name": "Phoenix Suns"
         },
-        "ORL":{
-
+        
+        {
+            "name": "Portland Trail Blazers"
         },
-        "PHI":{
-
+        
+        {
+            "name": "Sacramento Kings"
         },
-        "PHX":{
-
+            
+        {
+            "name": "San Antonio Spurs"
         },
-        "POR":{
-
+        
+        {
+            "name": "Toronto Raptors"
         },
-        "SAC":{
-
+        
+        {
+            "name": "Utah Jazz"
         },
-        "SAS":{
-
-        },
-        "TOR":{
-
-        },
-        "UTA":{
-
-        },
-        "WAS":{
-
+        
+        {
+            "name": "Washington Wizards"
         }
-    }
-]
-
+    ]
 }
-
