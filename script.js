@@ -7,7 +7,7 @@ $(document).ready(function () {
         // const filteredplayers = nba.filter(nba => nba.team[0].ATL.player)
         // $("<p>")
         let saveButton = $("#saveButton");
-        $(saveButton).click(function(event){
+        $(saveButton).click((event) => {
             event.preventDefault();
 
             let playerName = $("#player-name").val();
