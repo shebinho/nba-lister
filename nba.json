@@ -1819,39 +1819,1596 @@
         },
         
         {
-            "name": "Houston Rockets"
+            "name": "Houston Rockets",
+            "season-record": "65-17",
+            "ranking" : "1",
+            "players":[
+                {
+                    "age": 33,
+                    "nationality": "USA",
+                    "name": "Chris Paul",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/101108.png",
+                    "stats":[
+                        {
+                            "PTS": 21.1,
+                            "AST": 5.8,
+                            "REB": 5.9,
+                            "STL": 2.0,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "James Harden",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/201935.png",
+                    "stats":[
+                        {
+                            "PTS": 28.4,
+                            "AST": 6.9,
+                            "REB": 5.2,
+                            "STL": 2.1,
+                            "BLK": 0.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 33,
+                    "nationality": "USA",
+                    "name": "PJ Tucker",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/200782.png",
+                    "stats":[
+                        {
+                            "PTS": 8.6,
+                            "AST": 1.3,
+                            "REB": 6.2,
+                            "STL": 0.4,
+                            "BLK": 0.8
+                        }
+                    ]
+                },
+
+                {
+                    "age": 32,
+                    "nationality": "USA",
+                    "name": "Trevor Ariza",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/2772.png",
+                    "stats":[
+                        {
+                            "PTS": 9.3,
+                            "AST": 1.3,
+                            "REB": 3.6,
+                            "STL": 1.1,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 24,
+                    "nationality": "Switzerland",
+                    "name": "Clint Capela",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/203991.png",
+                    "stats":[
+                        {
+                            "PTS": 12.3,
+                            "AST": 1.4,
+                            "REB": 11.8,
+                            "STL": 0.8,
+                            "BLK": 2.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Eric Gordon",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/201569.png",
+                    "stats":[
+                        {
+                            "PTS": 14.9,
+                            "AST": 1.4,
+                            "REB": 2.6,
+                            "STL": 0.6,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 32,
+                    "nationality": "USA",
+                    "name": "Gerald Green",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/101123.png",
+                    "stats":[
+                        {
+                            "PTS": 6.5,
+                            "AST": 0.1,
+                            "REB": 2.9,
+                            "STL": 0.3,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 36,
+                    "nationality": "USA",
+                    "name": "Joe Johnson",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/2207.png",
+                    "stats":[
+                        {
+                            "PTS": 1.7,
+                            "AST": 0.3,
+                            "REB": 1.1,
+                            "STL": 0.0,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Ryan Anderson",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/201583.png",
+                    "stats":[
+                        {
+                            "PTS": 1.9,
+                            "AST": 0.6,
+                            "REB": 1.2,
+                            "STL": 0.3,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 35,
+                    "nationality": "Brazil",
+                    "name": "Nene",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612745/2017/260x190/2403.png",
+                    "stats":[
+                        {
+                            "PTS": 2.8,
+                            "AST": 0.5,
+                            "REB": 2.5,
+                            "STL": 0.2,
+                            "BLK": 0.5
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Indiana Pacers"
+            "name": "Indiana Pacers",
+            "season-record": "48-34",
+            "ranking" : "5",
+            "players":[
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Darren Collison",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/201954.png",
+                    "stats":[
+                        {
+                            "PTS": 11.3,
+                            "AST": 4.7,
+                            "REB": 3.0,
+                            "STL": 1.0,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "USA",
+                    "name": "Victor Oladipo",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/203506.png",
+                    "stats":[
+                        {
+                            "PTS": 22.7,
+                            "AST": 6.0,
+                            "REB": 8.3,
+                            "STL": 2.4,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "Croatia",
+                    "name": "Bojan Bogdanovic",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/202711.png",
+                    "stats":[
+                        {
+                            "PTS": 12.4,
+                            "AST": 1.9,
+                            "REB": 3.4,
+                            "STL": 0.9,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Thaddeus Young",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/201152.png",
+                    "stats":[
+                        {
+                            "PTS": 11.3,
+                            "AST": 1.4,
+                            "REB": 7.7,
+                            "STL": 1.7,
+                            "BLK": 0.9
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "USA",
+                    "name": "Myles Turner",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/201152.png",
+                    "stats":[
+                        {
+                            "PTS": 12.4,
+                            "AST": 0.6,
+                            "REB": 5.1,
+                            "STL": 0.3,
+                            "BLK": 0.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "Canada",
+                    "name": "Cory Joseph",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/202709.png",
+                    "stats":[
+                        {
+                            "PTS": 4.7,
+                            "AST": 3.0,
+                            "REB": 2.4,
+                            "STL": 1.3,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "Lance Stephenson",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/202362.png",
+                    "stats":[
+                        {
+                            "PTS": 10.4,
+                            "AST": 2.9,
+                            "REB": 2.7,
+                            "STL": 0.3,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Trevor Booker",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/202344.png",
+                    "stats":[
+                        {
+                            "PTS": 2.6,
+                            "AST": 0.0,
+                            "REB": 2.6,
+                            "STL": 0.1,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "Lithuania",
+                    "name": "Domantas Sabonis",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/1627734.png",
+                    "stats":[
+                        {
+                            "PTS": 12.4,
+                            "AST": 0.7,
+                            "REB": 4.6,
+                            "STL": 0.1,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 33,
+                    "nationality": "USA",
+                    "name": "Al Jefferson",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612754/2017/260x190/2744.png",
+                    "stats":[
+                        {
+                            "PTS": 7.0,
+                            "AST": 0.8,
+                            "REB": 4.0,
+                            "STL": 0.4,
+                            "BLK": 0.6
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Los Angeles Clippers"
+            "name": "Los Angeles Clippers",
+            "season-record": "42-40",
+            "ranking" : "10",
+            "players":[
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Patrick Beverley",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/201976.png",
+                    "stats":[
+                        {
+                            "PTS": 12.2,
+                            "AST": 2.9,
+                            "REB": 4.1,
+                            "STL": 1.7,
+                            "BLK": 0.5
+                        }
+                    ]
+                },
+
+                {
+                    "age": 31,
+                    "nationality": "USA",
+                    "name": "Lou Williams",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/101150.png",
+                    "stats":[
+                        {
+                            "PTS": 22.6,
+                            "AST": 5.3,
+                            "REB": 2.5,
+                            "STL": 1.1,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "Italy",
+                    "name": "Danilo Gallinari",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/201568.png",
+                    "stats":[
+                        {
+                            "PTS": 15.3,
+                            "AST": 2.0,
+                            "REB": 4.8,
+                            "STL": 0.6,
+                            "BLK": 0.5
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Tobias Harris",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/202699.png",
+                    "stats":[
+                        {
+                            "PTS": 18.6,
+                            "AST": 2.4,
+                            "REB": 5.5,
+                            "STL": 0.9,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "DeAndre Jordan",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/201599.png",
+                    "stats":[
+                        {
+                            "PTS": 12.0,
+                            "AST": 1.5,
+                            "REB": 15.2,
+                            "STL": 0.5,
+                            "BLK": 0.9
+                        }
+                    ]
+                },
+
+                {
+                    "age": 31,
+                    "nationality": "Serbia",
+                    "name": "Milos Teodosic",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/1628462.png",
+                    "stats":[
+                        {
+                            "PTS": 9.5,
+                            "AST": 4.6,
+                            "REB": 2.8,
+                            "STL": 0.5,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Austin Rivers",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/203085.png",
+                    "stats":[
+                        {
+                            "PTS": 15.1,
+                            "AST": 4.0,
+                            "REB": 2.4,
+                            "STL": 1.2,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Wesley Johnson",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/202325.png",
+                    "stats":[
+                        {
+                            "PTS": 5.4,
+                            "AST": 0.8,
+                            "REB": 2.9,
+                            "STL": 1.0,
+                            "BLK": 0.8
+                        }
+                    ]
+                },
+
+                {
+                    "age": 24,
+                    "nationality": "USA",
+                    "name": "Sam Dekker",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/1626155.png",
+                    "stats":[
+                        {
+                            "PTS": 4.2,
+                            "AST": 0.5,
+                            "REB": 2.4,
+                            "STL": 0.3,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 24,
+                    "nationality": "USA",
+                    "name": "Montrezl Harrell",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612746/2017/260x190/1626149.png",
+                    "stats":[
+                        {
+                            "PTS": 11.0,
+                            "AST": 1.0,
+                            "REB": 4.0,
+                            "STL": 0.5,
+                            "BLK": 0.7
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Los Angeles Lakers"
+            "name": "Los Angeles Lakers",
+            "season-record": "35-47",
+            "ranking" : "11",
+            "players":[
+                {
+                    "age": 20,
+                    "nationality": "USA",
+                    "name": "Lonzo Ball",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/1628366.png",
+                    "stats":[
+                        {
+                            "PTS": 10.2,
+                            "AST": 7.2,
+                            "REB": 6.9,
+                            "STL": 1.7,
+                            "BLK": 0.8
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Kentavious Caldwell-Pope",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/203484.png",
+                    "stats":[
+                        {
+                            "PTS": 13.4,
+                            "AST": 2.2,
+                            "REB": 5.2,
+                            "STL": 1.4,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 20,
+                    "nationality": "USA",
+                    "name": "Brandon Ingram",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/1627742.png",
+                    "stats":[
+                        {
+                            "PTS": 16.1,
+                            "AST": 3.9,
+                            "REB": 5.3,
+                            "STL": 0.8,
+                            "BLK": 0.7
+                        }
+                    ]
+                },
+
+                {
+                    "age": 23,
+                    "nationality": "USA",
+                    "name": "Julius Randle",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/203944.png",
+                    "stats":[
+                        {
+                            "PTS": 16.1,
+                            "AST": 2.6,
+                            "REB": 8.0,
+                            "STL": 0.5,
+                            "BLK": 0.5
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Brook Lopez",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/201572.png",
+                    "stats":[
+                        {
+                            "PTS": 13.0,
+                            "AST": 1.7,
+                            "REB": 4.0,
+                            "STL": 0.4,
+                            "BLK": 1.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Isaiah Thomas",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/202738.png",
+                    "stats":[
+                        {
+                            "PTS": 15.2,
+                            "AST": 4.8,
+                            "REB": 2.1,
+                            "STL": 0.5,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 23,
+                    "nationality": "USA",
+                    "name": "Josh Hart",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/1628404.png",
+                    "stats":[
+                        {
+                            "PTS": 7.9,
+                            "AST": 1.3,
+                            "REB": 4.2,
+                            "STL": 0.7,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "USA",
+                    "name": "Kyle Kuzma",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/1628398.png",
+                    "stats":[
+                        {
+                            "PTS": 16.1,
+                            "AST": 1.8,
+                            "REB": 6.3,
+                            "STL": 0.6,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 35,
+                    "nationality": "USA",
+                    "name": "Channing Frye",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/101112.png",
+                    "stats":[
+                        {
+                            "PTS": 5.0,
+                            "AST": 0.7,
+                            "REB": 2.5,
+                            "STL": 0.3,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 21,
+                    "nationality": "Croatia",
+                    "name": "Ivica Zubac",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612747/2017/260x190/1627826.png",
+                    "stats":[
+                        {
+                            "PTS": 3.7,
+                            "AST": 0.6,
+                            "REB": 2.9,
+                            "STL": 0.2,
+                            "BLK": 0.3
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Memphis Grizzlies"
+            "name": "Memphis Grizzlies",
+            "season-record": "22-60",
+            "ranking" : "14",
+            "players":[
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Mike Conley",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/201144.png",
+                    "stats":[
+                        {
+                            "PTS": 17.1,
+                            "AST": 4.1,
+                            "REB": 2.3,
+                            "STL": 1.0,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Tyreke Evans",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/201936.png",
+                    "stats":[
+                        {
+                            "PTS": 19.4,
+                            "AST": 5.2,
+                            "REB": 5.1,
+                            "STL": 1.1,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Chandler Parsons",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/202718.png",
+                    "stats":[
+                        {
+                            "PTS": 7.9,
+                            "AST": 1.9,
+                            "REB": 2.5,
+                            "STL": 0.5,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "JaMychal Green",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/203210.png",
+                    "stats":[
+                        {
+                            "PTS": 10.3,
+                            "AST": 1.4,
+                            "REB": 8.4,
+                            "STL": 0.6,
+                            "BLK": 0.5
+                        }
+                    ]
+                },
+
+                {
+                    "age": 33,
+                    "nationality": "Spain",
+                    "name": "Marc Gasol",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/201188.png",
+                    "stats":[
+                        {
+                            "PTS": 17.2,
+                            "AST": 4.2,
+                            "REB": 8.1,
+                            "STL": 0.7,
+                            "BLK": 1.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 32,
+                    "nationality": "USA",
+                    "name": "Mario Chalmers",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/201596.png",
+                    "stats":[
+                        {
+                            "PTS": 7.7,
+                            "AST": 3.0,
+                            "REB": 2.4,
+                            "STL": 1.2,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Ben McLemore",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/203463.png",
+                    "stats":[
+                        {
+                            "PTS": 7.5,
+                            "AST": 0.9,
+                            "REB": 2.5,
+                            "STL": 0.7,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "Canada",
+                    "name": "Dillon Brooks",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/1628415.png",
+                    "stats":[
+                        {
+                            "PTS": 11.0,
+                            "AST": 1.6,
+                            "REB": 3.1,
+                            "STL": 0.9,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 21,
+                    "nationality": "USA",
+                    "name": "Deyonta Davis",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/1627738.png",
+                    "stats":[
+                        {
+                            "PTS": 5.8,
+                            "AST": 0.6,
+                            "REB": 4.0,
+                            "STL": 0.2,
+                            "BLK": 0.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "USA",
+                    "name": "Brandan Wright",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612763/2017/260x190/201148.png",
+                    "stats":[
+                        {
+                            "PTS": 5.0,
+                            "AST": 0.5,
+                            "REB": 3.4,
+                            "STL": 0.5,
+                            "BLK": 0.9
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Miami Heat"
+            "name": "Miami Heat",
+            "season-record": "44-38",
+            "ranking" : "6",
+            "players":[
+                {
+                    "age": 32,
+                    "nationality": "Slovenia",
+                    "name": "Goran Dragic",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/201609.png",
+                    "stats":[
+                        {
+                            "PTS": 18.6,
+                            "AST": 4.6,
+                            "REB": 2.6,
+                            "STL": 1.0,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "USA",
+                    "name": "Dion Waiters",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/203079.png",
+                    "stats":[
+                        {
+                            "PTS": 14.3,
+                            "AST": 3.8,
+                            "REB": 2.6,
+                            "STL": 0.8,
+                            "BLK": 0.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "USA",
+                    "name": "Justise Winslow",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/1626159.png",
+                    "stats":[
+                        {
+                            "PTS": 9.8,
+                            "AST": 2.6,
+                            "REB": 6.6,
+                            "STL": 0.8,
+                            "BLK": 0.8
+                        }
+                    ]
+                },
+
+                {
+                    "age": 31,
+                    "nationality": "USA",
+                    "name": "James Johnson",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/201949.png",
+                    "stats":[
+                        {
+                            "PTS": 12.4,
+                            "AST": 4.8,
+                            "REB": 6.0,
+                            "STL": 1.2,
+                            "BLK": 1.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Hassan Whiteside",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/202355.png",
+                    "stats":[
+                        {
+                            "PTS": 5.2,
+                            "AST": 0.2,
+                            "REB": 6.0,
+                            "STL": 0.0,
+                            "BLK": 1.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "USA",
+                    "name": "Tyler Johnson",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/204020.png",
+                    "stats":[
+                        {
+                            "PTS": 8.0,
+                            "AST": 0.8,
+                            "REB": 1.6,
+                            "STL": 0.4,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 36,
+                    "nationality": "USA",
+                    "name": "Dwyane Wade",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/2548.png",
+                    "stats":[
+                        {
+                            "PTS": 16.6,
+                            "AST": 3.6,
+                            "REB": 4.2,
+                            "STL": 1.4,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 24,
+                    "nationality": "USA",
+                    "name": "Josh Richardson",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/1626196.png",
+                    "stats":[
+                        {
+                            "PTS": 8.4,
+                            "AST": 2.8,
+                            "REB": 3.0,
+                            "STL": 2.2,
+                            "BLK": 1.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "Canada",
+                    "name": "Kelly Olynyk",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/203482.png",
+                    "stats":[
+                        {
+                            "PTS": 12.8,
+                            "AST": 3.8,
+                            "REB": 4.6,
+                            "STL": 1.4,
+                            "BLK": 1.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 20,
+                    "nationality": "USA",
+                    "name": "Bam Adebayo",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612748/2017/260x190/1628389.png",
+                    "stats":[
+                        {
+                            "PTS": 3.4,
+                            "AST": 0.0,
+                            "REB": 4.0,
+                            "STL": 0.0,
+                            "BLK": 0.4
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Milwaukee Bucks"
+            "name": "Milwaukee Bucks",
+            "season-record": "44-38",
+            "ranking" : "7",
+            "players":[
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Eric Bledsoe",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/202339.png",
+                    "stats":[
+                        {
+                            "PTS": 13.6,
+                            "AST": 3.7,
+                            "REB": 3.6,
+                            "STL": 1.0,
+                            "BLK": 0.9
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Malcolm Brogdon",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/1627763.png",
+                    "stats":[
+                        {
+                            "PTS": 8.7,
+                            "AST": 2.4,
+                            "REB": 3.4,
+                            "STL": 0.1,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "USA",
+                    "name": "Khris Middleton",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203114.png",
+                    "stats":[
+                        {
+                            "PTS": 24.7,
+                            "AST": 3.1,
+                            "REB": 5.1,
+                            "STL": 0.9,
+                            "BLK": 0.7
+                        }
+                    ]
+                },
+
+                {
+                    "age": 23,
+                    "nationality": "Greece",
+                    "name": "Giannis Antetokounmpo",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203507.png",
+                    "stats":[
+                        {
+                            "PTS": 25.7,
+                            "AST": 6.3,
+                            "REB": 9.6,
+                            "STL": 1.4,
+                            "BLK": 0.9
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "John Henson",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203089.png",
+                    "stats":[
+                        {
+                            "PTS": 9.5,
+                            "AST": 2.5,
+                            "REB": 6.0,
+                            "STL": 0.0,
+                            "BLK": 3.5
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "Australia",
+                    "name": "Matthew Dellavedova",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203521.png",
+                    "stats":[
+                        {
+                            "PTS": 2.0,
+                            "AST": 2.7,
+                            "REB": 0.8,
+                            "STL": 0.3,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 26,
+                    "nationality": "USA",
+                    "name": "Tony Snell",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203503.png",
+                    "stats":[
+                        {
+                            "PTS": 2.7,
+                            "AST": 0.6,
+                            "REB": 1.9,
+                            "STL": 0.4,
+                            "BLK": 0.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 21,
+                    "nationality": "South Sudan",
+                    "name": "Thon Maker",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/1627748.png",
+                    "stats":[
+                        {
+                            "PTS": 5.5,
+                            "AST": 0.8,
+                            "REB": 3.8,
+                            "STL": 0.3,
+                            "BLK": 1.8
+                        }
+                    ]
+                },
+
+                {
+                    "age": 23,
+                    "nationality": "USA",
+                    "name": "Jabari Parker",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203953.png",
+                    "stats":[
+                        {
+                            "PTS": 10.0,
+                            "AST": 1.4,
+                            "REB": 6.1,
+                            "STL": 1.0,
+                            "BLK": 0.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Tyler Zeller",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2017/260x190/203092.png",
+                    "stats":[
+                        {
+                            "PTS": 1.6,
+                            "AST": 0.4,
+                            "REB": 2.0,
+                            "STL": 0.6,
+                            "BLK": 0.4
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "Minnesota Timberwolves"
+            "name": "Minnesota Timberwolves",
+            "season-record": "47-35",
+            "ranking" : "8",
+            "players":[
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Jeff Teague",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/201952.png",
+                    "stats":[
+                        {
+                            "PTS": 13.0,
+                            "AST": 5.8,
+                            "REB": 3.6,
+                            "STL": 0.6,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Jimmy Butler",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/202710.png",
+                    "stats":[
+                        {
+                            "PTS": 15.8,
+                            "AST": 4.0,
+                            "REB": 6.0,
+                            "STL": 0.8,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 23,
+                    "nationality": "Canada",
+                    "name": "Andrew Wiggins",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/203952.png",
+                    "stats":[
+                        {
+                            "PTS": 15.8,
+                            "AST": 2.0,
+                            "REB": 5.2,
+                            "STL": 0.4,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "USA",
+                    "name": "Karl-Anthony Towns",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/1626157.png",
+                    "stats":[
+                        {
+                            "PTS": 15.2,
+                            "AST": 2.2,
+                            "REB": 13.4,
+                            "STL": 0.4,
+                            "BLK": 1.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 32,
+                    "nationality": "USA",
+                    "name": "Taj Gibson",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/201959.png",
+                    "stats":[
+                        {
+                            "PTS": 6.2,
+                            "AST": 0.4,
+                            "REB": 4.0,
+                            "STL": 0.2,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "Derrick Rose",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/201565.png",
+                    "stats":[
+                        {
+                            "PTS": 14.2,
+                            "AST": 2.6,
+                            "REB": 1.8,
+                            "STL": 0.4,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 22,
+                    "nationality": "USA",
+                    "name": "Tyus Jones",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/1626145.png",
+                    "stats":[
+                        {
+                            "PTS": 1.0,
+                            "AST": 2.0,
+                            "REB": 2.3,
+                            "STL": 0.3,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 38,
+                    "nationality": "USA",
+                    "name": "Jamal Crawford",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/2037.png",
+                    "stats":[
+                        {
+                            "PTS": 11.8,
+                            "AST": 2.4,
+                            "REB": 2.6,
+                            "STL": 1.0,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 30,
+                    "nationality": "Serbia",
+                    "name": "Nemanja Bjelica",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/202357.png",
+                    "stats":[
+                        {
+                            "PTS": 4.6,
+                            "AST": 0.6,
+                            "REB": 3.0,
+                            "STL": 0.6,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "Senegal",
+                    "name": "Gorgui Dieng",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612750/2017/260x190/203476.png",
+                    "stats":[
+                        {
+                            "PTS": 3.4,
+                            "AST": 0.8,
+                            "REB": 3.6,
+                            "STL": 0.4,
+                            "BLK": 0.8
+                        }
+                    ]
+                }
+            ]
         },
         
         {
-            "name": "New Orleans Pelicans"
+            "name": "New Orleans Pelicans",
+            "season-record": "47-35",
+            "ranking" : "8",
+            "players":[
+                {
+                    "age": 32,
+                    "nationality": "USA",
+                    "name": "Rajon Rondo",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/200765.png",
+                    "stats":[
+                        {
+                            "PTS": 10.3,
+                            "AST": 12.2,
+                            "REB": 7.6,
+                            "STL": 1.4,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "Jrue Holiday",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/201950.png",
+                    "stats":[
+                        {
+                            "PTS": 23.7,
+                            "AST": 6.3,
+                            "REB": 5.7,
+                            "STL": 1.1,
+                            "BLK": 0.4
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "Montenegro",
+                    "name": "Nikola Mirotic",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/202703.png",
+                    "stats":[
+                        {
+                            "PTS": 15.0,
+                            "AST": 1.7,
+                            "REB": 9.6,
+                            "STL": 1.1,
+                            "BLK": 1.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 25,
+                    "nationality": "USA",
+                    "name": "Anthony Davis",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/203076.png",
+                    "stats":[
+                        {
+                            "PTS": 30.1,
+                            "AST": 1.7,
+                            "REB": 13.4,
+                            "STL": 2.0,
+                            "BLK": 2.3
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "DeMarcus Cousins",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/202326.png",
+                    "stats":[
+                        {
+                            "PTS": 25.2,
+                            "AST": 5.4,
+                            "REB": 12.9,
+                            "STL": 1.6,
+                            "BLK": 1.6
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "Ian Clark",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/203546.png",
+                    "stats":[
+                        {
+                            "PTS": 7.8,
+                            "AST": 1.2,
+                            "REB": 1.1,
+                            "STL": 0.9,
+                            "BLK": 0.2
+                        }
+                    ]
+                },
+
+                {
+                    "age": 29,
+                    "nationality": "USA",
+                    "name": "E'Twaun Moore",
+                    "position": "G",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/202734.png",
+                    "stats":[
+                        {
+                            "PTS": 11.3,
+                            "AST": 1.7,
+                            "REB": 2.6,
+                            "STL": 0.7,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "Solomon Hill",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/203524.png",
+                    "stats":[
+                        {
+                            "PTS": 3.7,
+                            "AST": 0.8,
+                            "REB": 1.9,
+                            "STL": 0.1,
+                            "BLK": 0.1
+                        }
+                    ]
+                },
+
+                {
+                    "age": 28,
+                    "nationality": "USA",
+                    "name": "Darius Miller",
+                    "position": "F",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/203121.png",
+                    "stats":[
+                        {
+                            "PTS": 4.8,
+                            "AST": 1.2,
+                            "REB": 2.2,
+                            "STL": 0.6,
+                            "BLK": 0.0
+                        }
+                    ]
+                },
+
+                {
+                    "age": 35,
+                    "nationality": "USA",
+                    "name": "Emeka Okafor",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612740/2017/260x190/2731.png",
+                    "stats":[
+                        {
+                            "PTS": 4.4,
+                            "AST": 0.3,
+                            "REB": 4.6,
+                            "STL": 0.3,
+                            "BLK": 1.0
+                        }
+                    ]
+                }
+            ]
         },
         
         {
