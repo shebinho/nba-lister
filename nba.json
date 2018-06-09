@@ -50,6 +50,7 @@
             "name": "Atlanta Hawks",
             "season-record": "24-58",
             "ranking" : "15",
+            "logo": "https://stats.nba.com/media/img/teams/logos/ATL_logo.svg",
             "players" : [
                 {
                     "age": 24,
