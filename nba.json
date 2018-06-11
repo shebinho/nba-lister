@@ -5,44 +5,8 @@
                 "logo": "https://stats.nba.com/media/img/league/nba-logoman.svg",
                 "east": "https://sportsfly.cbsistatic.com/fly-825/bundles/sportsmediacss/images/team-logos/nba/alt/light/EAS.svg",
                 "west": "https://sportsfly.cbsistatic.com/fly-825/bundles/sportsmediacss/images/team-logos/nba/alt/light/WES.svg"  
-            },
-
-            "teams" : {
-                "logos" : {
-                    "ATL": "https://stats.nba.com/media/img/teams/logos/ATL_logo.svg",
-                    "BOS": "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg",
-                    "BKN": "https://stats.nba.com/media/img/teams/logos/BKN_logo.svg",
-                    "CHA": "https://stats.nba.com/media/img/teams/logos/CHA_logo.svg",
-                    "CHI": "https://stats.nba.com/media/img/teams/logos/CHI_logo.svg",
-                    "CLE": "https://stats.nba.com/media/img/teams/logos/CLE_logo.svg",
-                    "DAL": "https://stats.nba.com/media/img/teams/logos/DAL_logo.svg",
-                    "DEN": "https://stats.nba.com/media/img/teams/logos/DEN_logo.svg",
-                    "DET": "https://stats.nba.com/media/img/teams/logos/DET_logo.svg",
-                    "GSW": "https://stats.nba.com/media/img/teams/logos/GSW_logo.svg",
-                    "HOU": "https://stats.nba.com/media/img/teams/logos/HOU_logo.svg",
-                    "IND": "https://stats.nba.com/media/img/teams/logos/IND_logo.svg",
-                    "LAC": "https://stats.nba.com/media/img/teams/logos/LAC_logo.svg",
-                    "LAL": "https://stats.nba.com/media/img/teams/logos/LAL_logo.svg",
-                    "MEM": "https://stats.nba.com/media/img/teams/logos/MEM_logo.svg",
-                    "MIA": "https://stats.nba.com/media/img/teams/logos/MIA_logo.svg",
-                    "MIL": "https://stats.nba.com/media/img/teams/logos/MIL_logo.svg",
-                    "MIN": "https://stats.nba.com/media/img/teams/logos/MIN_logo.svg",
-                    "NOP": "https://stats.nba.com/media/img/teams/logos/NOP_logo.svg",
-                    "NYK": "https://stats.nba.com/media/img/teams/logos/NYK_logo.svg",
-                    "OKC": "https://stats.nba.com/media/img/teams/logos/OKC_logo.svg",
-                    "ORL": "https://stats.nba.com/media/img/teams/logos/ORL_logo.svg",
-                    "PHI": "https://stats.nba.com/media/img/teams/logos/PHI_logo.svg",
-                    "PHX": "https://stats.nba.com/media/img/teams/logos/PHX_logo.svg",
-                    "POR": "https://stats.nba.com/media/img/teams/logos/POR_logo.svg",
-                    "SAC": "https://stats.nba.com/media/img/teams/logos/SAC_logo.svg",
-                    "SAS": "https://stats.nba.com/media/img/teams/logos/SAS_logo.svg",
-                    "TOR": "https://stats.nba.com/media/img/teams/logos/TOR_logo.svg",
-                    "UTA": "https://stats.nba.com/media/img/teams/logos/UTA_logo.svg",
-                    "WAS": "https://stats.nba.com/media/img/teams/logos/WAS_logo.svg"
-                }
-            }
+            } 
         }
-        
     },
 
     "teams":[
@@ -228,6 +192,7 @@
             "name": "Boston Celtics",
             "season-record": "55-27",
             "ranking" : "2",
+            "logo": "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg",
             "players":[
                 {
                     "age": 26,
@@ -405,6 +370,7 @@
             "name": "Brooklyn Nets",
             "season-record": "28-54",
             "ranking" : "12",
+            "logo": "https://stats.nba.com/media/img/teams/logos/BKN_logo.svg",
             "players":[
                 {
                     "age": 22,
@@ -583,6 +549,7 @@
             "name": "Charlotte Hornets",
             "season-record": "36-46",
             "ranking" : "10",
+            "logo": "https://stats.nba.com/media/img/teams/logos/CHA_logo.svg",
             "players":[
                 {
                     "age": 28,
@@ -760,6 +727,7 @@
             "name": "Chicago Bulls",
             "season-record": "27-55",
             "ranking" : "13",
+            "logo": "https://stats.nba.com/media/img/teams/logos/CHI_logo.svg",
             "players":[
                 {
                     "age": 24,
@@ -938,6 +906,7 @@
             "name": "Cleveland Cavaliers",
             "season-record": "50-32",
             "ranking" : "4",
+            "logo": "https://stats.nba.com/media/img/teams/logos/CLE_logo.svg",
             "players":[
                 {
                     "age": 32,
@@ -1115,6 +1084,7 @@
             "name": "Dallas Mavericks",
             "season-record": "24-58",
             "ranking" : "13",
+            "logo": "https://stats.nba.com/media/img/teams/logos/DAL_logo.svg",
             "players":[
                 {
                     "age": 20,
@@ -1292,6 +1262,7 @@
             "name": "Denver Nuggets",
             "season-record": "46-36",
             "ranking" : "9",
+            "logo": "https://stats.nba.com/media/img/teams/logos/DEN_logo.svg",
             "players":[
                 {
                     "age": 21,
@@ -1469,6 +1440,7 @@
             "name": "Detroit Pistons",
             "season-record": "39-43",
             "ranking" : "9",
+            "logo": "https://stats.nba.com/media/img/teams/logos/DET_logo.svg",
             "players":[
                 {
                     "age": 28,
@@ -1646,6 +1618,7 @@
             "name": "Golden State Warriors",
             "season-record": "58-24",
             "ranking" : "2",
+            "logo": "https://stats.nba.com/media/img/teams/logos/GSW_logo.svg",
             "players":[
                 {
                     "age": 30,
@@ -1823,6 +1796,7 @@
             "name": "Houston Rockets",
             "season-record": "65-17",
             "ranking" : "1",
+            "logo": "https://stats.nba.com/media/img/teams/logos/HOU_logo.svg",
             "players":[
                 {
                     "age": 33,
@@ -2000,6 +1974,7 @@
             "name": "Indiana Pacers",
             "season-record": "48-34",
             "ranking" : "5",
+            "logo": "https://stats.nba.com/media/img/teams/logos/IND_logo.svg",
             "players":[
                 {
                     "age": 30,
@@ -2177,6 +2152,7 @@
             "name": "Los Angeles Clippers",
             "season-record": "42-40",
             "ranking" : "10",
+            "logo": "https://stats.nba.com/media/img/teams/logos/LAC_logo.svg",
             "players":[
                 {
                     "age": 29,
@@ -2354,6 +2330,7 @@
             "name": "Los Angeles Lakers",
             "season-record": "35-47",
             "ranking" : "11",
+            "logo": "https://stats.nba.com/media/img/teams/logos/LAL_logo.svg",
             "players":[
                 {
                     "age": 20,
@@ -2531,6 +2508,7 @@
             "name": "Memphis Grizzlies",
             "season-record": "22-60",
             "ranking" : "14",
+            "logo": "https://stats.nba.com/media/img/teams/logos/MEM_logo.svg",
             "players":[
                 {
                     "age": 30,
@@ -2708,6 +2686,7 @@
             "name": "Miami Heat",
             "season-record": "44-38",
             "ranking" : "6",
+            "logo": "https://stats.nba.com/media/img/teams/logos/MIA_logo.svg",
             "players":[
                 {
                     "age": 32,
@@ -2885,6 +2864,7 @@
             "name": "Milwaukee Bucks",
             "season-record": "44-38",
             "ranking" : "7",
+            "logo": "https://stats.nba.com/media/img/teams/logos/MIL_logo.svg",
             "players":[
                 {
                     "age": 28,
@@ -3062,6 +3042,7 @@
             "name": "Minnesota Timberwolves",
             "season-record": "47-35",
             "ranking" : "8",
+            "logo": "https://stats.nba.com/media/img/teams/logos/MIN_logo.svg",
             "players":[
                 {
                     "age": 29,
@@ -3239,6 +3220,7 @@
             "name": "New Orleans Pelicans",
             "season-record": "48-34",
             "ranking" : "6",
+            "logo": "https://stats.nba.com/media/img/teams/logos/NOP_logo.svg",
             "players":[
                 {
                     "age": 32,
@@ -3416,6 +3398,7 @@
             "name": "New York Knicks",
             "season-record": "29-53",
             "ranking" : "11",
+            "logo": "https://stats.nba.com/media/img/teams/logos/NYK_logo.svg",
             "players":[
                 {
                     "age": 19,
@@ -3561,6 +3544,7 @@
             "name": "Oklahoma City Thunder",
             "season-record": "48-34",
             "ranking" : "4",
+            "logo": "https://stats.nba.com/media/img/teams/logos/OKC_logo.svg",
             "players":[
                 {
                     "age": 29,
@@ -3738,6 +3722,7 @@
             "name": "Orlando Magic",
             "season-record": "25-57",
             "ranking" : "14",
+            "logo": "https://stats.nba.com/media/img/teams/logos/ORL_logo.svg",
             "players":[
                 {
                     "age": 30,
@@ -3915,6 +3900,7 @@
             "name": "Philadelphia 76ers",
             "season-record": "52-30",
             "ranking" : "3",
+            "logo": "https://stats.nba.com/media/img/teams/logos/PHI_logo.svg",
             "players":[
                 {
                     "age": 21,
@@ -4092,6 +4078,7 @@
             "name": "Phoenix Suns",
             "season-record": "21-61",
             "ranking" : "15",
+            "logo": "https://stats.nba.com/media/img/teams/logos/PHX_logo.svg",
             "players":[
                 {
                     "age": 24,
@@ -4269,6 +4256,7 @@
             "name": "Portland Trail Blazers",
             "season-record": "49-33",
             "ranking" : "3",
+            "logo": "https://stats.nba.com/media/img/teams/logos/POR_logo.svg",
             "players":[
                 {
                     "age": 27,
@@ -4446,6 +4434,7 @@
             "name": "Sacramento Kings",
             "season-record": "27-55",
             "ranking" : "12",
+            "logo": "https://stats.nba.com/media/img/teams/logos/SAC_logo.svg",
             "players":[
                 {
                     "age": 20,
@@ -4623,6 +4612,7 @@
             "name": "San Antonio Spurs",
             "season-record": "47-35",
             "ranking" : "7",
+            "logo": "https://stats.nba.com/media/img/teams/logos/SAS_logo.svg",
             "players":[
                 {
                     "age": 29,
@@ -4783,6 +4773,7 @@
             "name": "Toronto Raptors",
             "season-record": "59-23",
             "ranking" : "1",
+            "logo": "https://stats.nba.com/media/img/teams/logos/TOR_logo.svg",
             "players":[
                 {
                     "age": 32,
@@ -4960,6 +4951,7 @@
             "name": "Utah Jazz",
             "season-record": "48-34",
             "ranking" : "5",
+            "logo": "https://stats.nba.com/media/img/teams/logos/UTA_logo.svg",
             "players":[
                 {
                     "age": 27,
@@ -5137,6 +5129,7 @@
             "name": "Washington Wizards",
             "season-record": "43-39",
             "ranking" : "8",
+            "logo": "https://stats.nba.com/media/img/teams/logos/WAS_logo.svg",
             "players":[
                 {
                     "age": 27,
