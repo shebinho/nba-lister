@@ -9,6 +9,10 @@
     
 }
 
+  /* inherit border-box on all elements in the universe and before and after
+   */
+  
+
 html,body{
     padding: 0;
     margin: 0;
@@ -17,6 +21,13 @@ html,body{
     height: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
 }
 
 .container123{
@@ -80,19 +91,36 @@ html,body{
     z-index: 2;
 }
 
+.card{
+    padding-top: 3%;  
+}
+
+.card-body{
+    border: solid 10px silver;
+    background: linear-gradient(to bottom, #333333,#0066ab );
+    border-radius: 3%;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.75);
+                   
+}
+
+.card-body:hover{
+    cursor: pointer;               
+}
+
 .image-card-body {
     width: 100%;
-    height: 120%;
+    height: 100%;
 }
-.card-body{
-    border: solid 10px silver;                
+
+.card-body-text{
+    color: #ecf0f1;
+    font-size: 2rem;
+    font-family: 'Graduate', cursive;
+    padding-left: 5%;
 }
 
 
 
-.col-lg-2{
-    width: 17.666667% !important;
-}
 .container-east{
     background: var(--east-conf-color) center center no-repeat;
     background-size: cover;
