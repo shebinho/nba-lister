@@ -30,21 +30,24 @@ $(document).ready(function () {
             
             let container = $("<div>").attr("id", "eastern-conference").addClass("container-fluid container-east").appendTo("body");
             let rowDiv = $("<div>").addClass("row").appendTo(container);
-            let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-10 col-lg-2");
+            let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-2 col-lg-2");
             let cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
             let bodyCardDiv = $("<div class='card-body'>").appendTo(cardDiv);
             let nbaEastTeams = nba.teams.filter(el => el.conference == "east");
+            console.log(nbaEastTeams);
+            
              
             function showTeams() {
 
 
                 nbaEastTeams.forEach(element => {
-                    showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-10 col-lg-2").appendTo(rowDiv);
-                    cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
+                    showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
+                    cardDiv = $("<div class='card'>").attr( "id",element.name).appendTo(showTeamsDiv);
                     bodyCardDiv = $("<div class='card-body'>").appendTo(cardDiv);
+                    
 
                     bodyCardDiv
-                        .append($(`<img src=${element.logo} />`).attr( "id",element.name).addClass("image-card-body"))
+                        .append($(`<img src=${element.logo} />`).addClass("image-card-body"))
                         .append($("<p>").text(` Team Name : ${element.name}`).addClass("card-body-text"))
                         .append($("<p>").text(` Season Record : ${element["season-record"]}`).addClass("card-body-text"))
                         .append($("<p>").text(` Ranking : ${element.ranking}`).addClass("card-body-text"))
@@ -52,6 +55,34 @@ $(document).ready(function () {
                         return bodyCardDiv;
                         
                 })
+                $(".card").click((event)=>{
+                    // showPlayers();
+                    // event.preventDefault();
+                    $(container).hide();
+                    container = $("<div>").attr("id", "eastern-conference").addClass("container-fluid container-east").appendTo("body");
+                    rowDiv = $("<div>").addClass("row").appendTo(container);
+                    nbaEastTeams.forEach(element =>{
+                        if(event.currentTarget.id === element.name){
+                            
+                            element.players.forEach(element =>{
+                                showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
+                                cardDiv = $("<div class='card'>").attr( "id",element.name).appendTo(showTeamsDiv);
+                                bodyCardDiv = $("<div class='card-body'>").appendTo(cardDiv);
+                                
+            
+                                bodyCardDiv
+                                    .append($(`<img src=${element.img} />`).addClass("image-card-body"))
+                                    .append($("<p>").text(` Player Name : ${element.name}`).addClass("card-body-text"))
+                                    .append($("<p>").text(` Nationality : ${element.nationality}`).addClass("card-body-text"))
+                                    .append($("<p>").text(` Position : ${element.position}`).addClass("card-body-text"))
+                                    
+                                    return bodyCardDiv;
+                            })
+                            
+                        }
+                    })
+                  });
+                
                 // console.log(bodyCardDiv);
 
                 //console.log(nbaTeams);
@@ -60,23 +91,21 @@ $(document).ready(function () {
 
             showTeams();
 
-          function showPlayers(){
+        //   function showPlayers(){
            
-                $(container).hide();
+        //         $(container).hide();
 
-              let bostonPlayers =  nbaEastTeams.filter(el => el.name === "Boston Celtics");
-              console.log(bostonPlayers);
-              console.log(bodyCardDiv);
+        //       let bostonPlayers =  nbaEastTeams.filter(el => el.name === "Boston Celtics");
+        //       console.log(bostonPlayers);
+        //       console.log(bodyCardDiv);
               
-              bostonPlayers.forEach(el => {
-                console.log(el.players);
-              })
+        //       bostonPlayers.forEach(el => {
+        //         console.log(el.players);
+        //       })
           
-          }
+        //   }
 
-          $(".image-card-body").click(()=>{
-            showPlayers();
-          })
+          
 
          
 
@@ -88,45 +117,45 @@ $(document).ready(function () {
 
             // const filteredplayers = nba.filter(nba => nba.team[0].ATL.player)
             // $("<p>")
-            let nezz = []
-            let playerName;
-            let saveButton = $("#saveButton");
+            // let nezz = []
+            // let playerName;
+            // let saveButton = $("#saveButton");
 
-            $(saveButton).click((event) => {
-                event.preventDefault();
+            // $(saveButton).click((event) => {
+            //     event.preventDefault();
 
-                playerName = $("#player-name").val();
-                nba.teams.forEach(element => {
-                    if (element.players)
-                        element.players.forEach(player => {
-                            if (playerName === player.name)
-                                nezz.push(player)
-                            // console.log(nezz);
-                        })
-                })
+            //     playerName = $("#player-name").val();
+            //     nba.teams.forEach(element => {
+            //         if (element.players)
+            //             element.players.forEach(player => {
+            //                 if (playerName === player.name)
+            //                     nezz.push(player)
+            //                 // console.log(nezz);
+            //             })
+            //     })
 
-                // for(let i = 0 ; i < nba.teams.length ; i++){
-                //     console.log("Team Name: "+ nba.teams[i].name)
-                //     for(let j = 0; j < 5; j++) {
-                //         nba.teams[i].players[j].stats.forEach(element => {
-                //             if(nba.teams[i].players[j].name === playerName){
-                //                 console.log("Player Name: "+nba.teams[i].players[j].name,"\n", "Position: "+ nba.teams[i].players[j].position)
-                //                 console.log(" PTS: " + element.PTS,"\n", "AST: "+ element.AST,"\n", "REB: "+element.REB,"\n","BLK: "+element.BLK,"\n", "STL: "+element.STL);
-                //             }
+            //     // for(let i = 0 ; i < nba.teams.length ; i++){
+            //     //     console.log("Team Name: "+ nba.teams[i].name)
+            //     //     for(let j = 0; j < 5; j++) {
+            //     //         nba.teams[i].players[j].stats.forEach(element => {
+            //     //             if(nba.teams[i].players[j].name === playerName){
+            //     //                 console.log("Player Name: "+nba.teams[i].players[j].name,"\n", "Position: "+ nba.teams[i].players[j].position)
+            //     //                 console.log(" PTS: " + element.PTS,"\n", "AST: "+ element.AST,"\n", "REB: "+element.REB,"\n","BLK: "+element.BLK,"\n", "STL: "+element.STL);
+            //     //             }
 
-                //         });
+            //     //         });
 
-                //    }
+            //     //    }
 
-                // }
+            //     // }
 
-                console.log(nezz[0].stats[0])
+            //     console.log(nezz[0].stats[0])
 
-                let numberComparer = (a, b) => {
-                    console.log(` Comparing ${a} and ${b}`)
-                    return b - a;
-                };
-            })
+            //     let numberComparer = (a, b) => {
+            //         console.log(` Comparing ${a} and ${b}`)
+            //         return b - a;
+            //     };
+            // })
 
 
 
