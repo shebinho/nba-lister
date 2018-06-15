@@ -333,23 +333,6 @@
                 },
 
                 {
-                    "age": 27,
-                    "nationality": "USA",
-                    "name": "Greg Monroe",
-                    "position": "C",
-                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612738/2017/260x190/202328.png",
-                    "stats":[
-                        {
-                            "PTS": 5.6,
-                            "AST": 0.8,
-                            "REB": 4.4,
-                            "STL": 0.0,
-                            "BLK": 0.2
-                        }
-                    ]
-                },
-
-                {
                     "age": 28,
                     "nationality": "USA",
                     "name": "Gordon Hayward",
@@ -364,7 +347,26 @@
                             "BLK": 0.2
                         }
                     ]
-                } 
+                }, 
+
+                {
+                    "age": 27,
+                    "nationality": "USA",
+                    "name": "Greg Monroe",
+                    "position": "C",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612738/2017/260x190/202328.png",
+                    "stats":[
+                        {
+                            "PTS": 5.6,
+                            "AST": 0.8,
+                            "REB": 4.4,
+                            "STL": 0.0,
+                            "BLK": 0.2
+                        }
+                    ]
+                }
+
+                
             ]
         },
         
