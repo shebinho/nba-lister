@@ -97,17 +97,17 @@
                     ]
                 },
                 {
-                    "age": 23,
+                    "age": 28,
                     "nationality": "USA",
-                    "name": "Isaiah Taylor",
+                    "name": "Josh Magette",
                     "position": "G",
-                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/1627819.png",
+                    "img": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612737/2017/260x190/203705.png",
                     "stats": [
                         {
-                            "PTS": 6.6,
-                            "AST": 3.1,
-                            "REB": 1.4,
-                            "STL": 0.5,
+                            "PTS": 2.6,
+                            "AST": 3.2,
+                            "REB": 1.1,
+                            "STL": 0.4,
                             "BLK": 0.1
                         }
                     ]
