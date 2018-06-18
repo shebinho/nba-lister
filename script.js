@@ -187,7 +187,7 @@ $(document).ready(function () {
 
             //   }
             console.log(nba);
-            // Za prv tim i subs====================
+            // Za prv tim i subs=====================
             // nba.teams.forEach(e => {
             //     e.players.forEach((element, i) => {
             //         if(i < 5){
@@ -207,7 +207,7 @@ $(document).ready(function () {
             //         }
             //     })
             // })
-            // Za prv tim i subs========================
+            // Za prv tim i subs=========================
 
 
 
