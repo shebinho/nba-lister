@@ -27,149 +27,71 @@ $(document).ready(function () {
 
         $.getJSON("https://raw.githubusercontent.com/shebinho/nba-lister/master/nba.json", (nba) => {
 
-            if (event.currentTarget.id === "eastern-conference") {
-
-                let container = $("<div>").attr("id", "eastern-conference").addClass("container-fluid container-east").appendTo("body");
+            function showTeams() {
+                let targetConferenceId = event.currentTarget.id;
+                let nbaTeams = nba.teams.filter(el => el.conference == targetConferenceId);
+                let container = $("<div>").attr("id", targetConferenceId).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
                 let rowDiv = $("<div>").addClass("row").appendTo(container);
                 let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-2 col-lg-4");
                 let cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
-                let bodyCardDiv = $("<div class='card-body card-body-east'>").appendTo(cardDiv);
-                let nbaEastTeams = nba.teams.filter(el => el.conference == "east");
-                console.log(nbaEastTeams);
+                let bodyCardDiv = $(`<div class='card-body card-body-${targetConferenceId}'>`).appendTo(cardDiv);
+
+                nbaTeams.forEach(element => {
+                    showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
+                    cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
+                    bodyCardDiv = $(`<div class='card-body card-body-${targetConferenceId}'>`).appendTo(cardDiv);
 
 
-                function showTeams() {
+                    bodyCardDiv
+                        .append($(`<img src=${element.logo} />`).addClass("image-card-body"))
+                        .append($("<p>").text("Team Name").addClass("card-body-text text-prop"))
+                        .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
+                        .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
+                        .append($("<p>").text(`${element["season-record"]}`).addClass("card-body-text"))
+                        .append($("<p>").text("Ranking").addClass("card-body-text text-prop"))
+                        .append($("<p>").text(`${element.ranking}`).addClass("card-body-text"))
+
+                    return bodyCardDiv;
+
+                })
+                $(".card").click((event) => {
+                    // showPlayers();
+                    // event.preventDefault();
+                    let targetTeamId = event.currentTarget.id;
+                    $(container).hide();
+                    container = $("<div>").attr("id", targetConferenceId).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
+                    rowDiv = $("<div>").addClass("row").appendTo(container);
+                    nbaTeams.forEach(element => {
+                        if (targetTeamId === element.name) {
+
+                            element.players.forEach(element => {
+                                showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
+                                cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
+                                bodyCardDiv = $(`<div class='card-body card-body-${targetConferenceId}'>`).appendTo(cardDiv);
 
 
-                    nbaEastTeams.forEach(element => {
-                        showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
-                        cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
-                        bodyCardDiv = $("<div class='card-body card-body-east'>").appendTo(cardDiv);
+                                bodyCardDiv
+                                    .append($(`<img src=${element.img} />`).addClass("image-card-body"))
+                                    .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
+                                    .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
+                                    .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
+                                    .append($("<p>").text(`${element.nationality}`).addClass("card-body-text"))
+                                    .append($("<p>").text("Position").addClass("card-body-text text-prop"))
+                                    .append($("<p>").text(`${element.position}`).addClass("card-body-text"))
 
+                                return bodyCardDiv;
+                            })
 
-                        bodyCardDiv
-                            .append($(`<img src=${element.logo} />`).addClass("image-card-body"))
-                            .append($("<p>").text("Team Name").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
-                            .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element["season-record"]}`).addClass("card-body-text"))
-                            .append($("<p>").text("Ranking").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element.ranking}`).addClass("card-body-text"))
-
-                        return bodyCardDiv;
-
+                        }
                     })
-                    $(".card").click((event) => {
-                        // showPlayers();
-                        // event.preventDefault();
-                        $(container).hide();
-                        container = $("<div>").attr("id", "eastern-conference").addClass("container-fluid container-east").appendTo("body");
-                        rowDiv = $("<div>").addClass("row").appendTo(container);
-                        nbaEastTeams.forEach(element => {
-                            if (event.currentTarget.id === element.name) {
-
-                                element.players.forEach(element => {
-                                    showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
-                                    cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
-                                    bodyCardDiv = $("<div class='card-body card-body-east'>").appendTo(cardDiv);
+                });
 
 
-                                    bodyCardDiv
-                                        .append($(`<img src=${element.img} />`).addClass("image-card-body"))
-                                        .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
-                                        .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.nationality}`).addClass("card-body-text"))
-                                        .append($("<p>").text("Position").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.position}`).addClass("card-body-text"))
 
-                                    return bodyCardDiv;
-                                })
-
-                            }
-                        })
-                    });
-
-                    // console.log(bodyCardDiv);
-
-                    //console.log(nbaTeams);
-                    //console.log(nbaLogosArray);
-                };
-
-                showTeams();
             }
 
-            if (event.currentTarget.id === "western-conference") {
-                let container = $("<div>").attr("id", "western-conference").addClass("container-fluid container-west").appendTo("body");
-                let rowDiv = $("<div>").addClass("row").appendTo(container);
-                let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-2 col-lg-4");
-                let cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
-                let bodyCardDiv = $("<div class='card-body card-body-west'>").appendTo(cardDiv);
-                let nbaWestTeams = nba.teams.filter(el => el.conference == "west");
-                // console.log(nbaWestTeams);
+            showTeams();
 
-
-                function showTeams() {
-
-
-                    nbaWestTeams.forEach(element => {
-                        showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
-                        cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
-                        bodyCardDiv = $("<div class='card-body card-body-west'>").appendTo(cardDiv);
-
-
-                        bodyCardDiv
-                            .append($(`<img src=${element.logo} />`).addClass("image-card-body"))
-                            .append($("<p>").text("Team Name").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
-                            .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element["season-record"]}`).addClass("card-body-text"))
-                            .append($("<p>").text("Ranking").addClass("card-body-text text-prop"))
-                            .append($("<p>").text(`${element.ranking}`).addClass("card-body-text"))
-
-                        return bodyCardDiv;
-
-                    })
-                    $(".card").click((event) => {
-                        // showPlayers();
-                        // event.preventDefault();
-                        $(container).hide();
-                        console.log(nbaWestTeams);
-                        container = $("<div>").attr("id", "western-conference").addClass("container-fluid container-west").appendTo("body");
-                        rowDiv = $("<div>").addClass("row").appendTo(container);
-                        nbaWestTeams.forEach(element => {
-                            if (event.currentTarget.id === element.name) {
-
-                                element.players.forEach(element => {
-                                    showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
-                                    cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
-                                    bodyCardDiv = $("<div class='card-body card-body-west'>").appendTo(cardDiv);
-
-
-                                    bodyCardDiv
-                                        .append($(`<img src=${element.img} />`).addClass("image-card-body"))
-                                        .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
-                                        .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.nationality}`).addClass("card-body-text"))
-                                        .append($("<p>").text("Position").addClass("card-body-text text-prop"))
-                                        .append($("<p>").text(`${element.position}`).addClass("card-body-text"))
-
-                                    return bodyCardDiv;
-                                })
-
-                            }
-                        })
-                    });
-
-                    // console.log(bodyCardDiv);
-
-                    //console.log(nbaTeams);
-                    //console.log(nbaLogosArray);
-                };
-
-                showTeams();
-            }
 
 
 
