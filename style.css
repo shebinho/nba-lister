@@ -95,33 +95,57 @@ html,body{
     padding-top: 3%;  
 }
 
-.card-body{
+.card-body-east{
     border: solid 10px silver;
-    background: linear-gradient(to bottom, #333333,#0066ab );
+    background: linear-gradient(to bottom, #333333,var(--east-conf-color));
+    border-radius: 3%;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.75);
+                   
+}
+
+.card-body-west{
+    border: solid 10px silver;
+    background: linear-gradient(to bottom, #333333,var(--west-conf-color));
     border-radius: 3%;
     box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.75);
                    
 }
 
 .card-body:hover{
-    cursor: pointer;               
+    cursor: pointer;
+                   
 }
 
 .image-card-body {
-    width: 100%;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    
 }
 
 .card-body-text{
     color: #ecf0f1;
+    text-align: center;
     font-size: 2rem;
     font-family: 'Graduate', cursive;
     padding-left: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-prop{
+    text-align: center;
+    font-weight: bold;
 }
 
 
 
 .container-east{
     background: var(--east-conf-color) center center no-repeat;
+    background-size: cover;
+}
+
+.container-west{
+    background: var(--west-conf-color) center center no-repeat;
     background-size: cover;
 }
