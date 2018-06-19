@@ -126,7 +126,7 @@ html,body{
 .card-body-text{
     color: #ecf0f1;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2vw;
     font-family: 'Graduate', cursive;
     padding-left: 5%;
     white-space: nowrap;
@@ -150,7 +150,7 @@ html,body{
     background-size: cover;
 }
 .fa-arrow-circle-left{
-    font-size: 4rem;
+    font-size: 3vw;
     display: flex;
     justify-content: flex-end;
 }
