@@ -88,7 +88,7 @@ $(document).ready(function () {
                             })
 
                             let backBtn = $("<i id='back' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(containerTeams);
-                            $("#back").click((event) => {
+                            $(containerTeams).on("click", "#back", function (e) {
                                 $(containerTeams).hide();
                                 $(container).show();
                             })
