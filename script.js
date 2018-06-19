@@ -21,6 +21,7 @@ $(document).ready(function () {
         container123.classList.remove("hover-right");
     });
 
+    // EVENT FOR SHOWING TEAMS
     $(".split").click((event) => {
         event.preventDefault();
         $("#hide").hide();
@@ -54,13 +55,15 @@ $(document).ready(function () {
                     return bodyCardDiv;
 
                 })
+
+                // EVENT FOR SHOWING PLAYERS
                 $(".card").click((event) => {
                     // showPlayers();
                     // event.preventDefault();
                     let targetTeamId = event.currentTarget.id;
                     $(container).hide();
-                    container = $("<div>").attr("id", targetConferenceId).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
-                    rowDiv = $("<div>").addClass("row").appendTo(container);
+                    let containerTeams = $("<div>").attr({ "id": targetConferenceId, "id": targetTeamId }).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
+                    rowDiv = $("<div>").addClass("row").appendTo(containerTeams);
                     nbaTeams.forEach(element => {
                         if (targetTeamId === element.name) {
 
@@ -79,9 +82,16 @@ $(document).ready(function () {
                                     .append($("<p>").text("Position").addClass("card-body-text text-prop"))
                                     .append($("<p>").text(`${element.position}`).addClass("card-body-text"))
 
+
+
                                 return bodyCardDiv;
                             })
 
+                            let backBtn = $("<i id='back' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(containerTeams);
+                            $("#back").click((event) => {
+                                $(containerTeams).hide();
+                                $(container).show();
+                            })
                         }
                     })
                 });

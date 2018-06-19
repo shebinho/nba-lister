@@ -149,3 +149,16 @@ html,body{
     background: var(--west-conf-color) center center no-repeat;
     background-size: cover;
 }
+.fa-arrow-circle-left{
+    font-size: 4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa-arrow-circle-left:hover{
+    cursor: pointer;
+}
+
+.paraBack{
+    padding-left: 0.3%;
+}
