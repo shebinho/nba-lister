@@ -60,12 +60,12 @@ $(document).ready(function () {
 
                 filteredTeams.forEach(element => {
                     showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
-                    cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
+                    cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
                     bodyCardDiv = $(`<div class='card-body card-body-${targetConferenceId}'>`).appendTo(cardDiv);
 
 
                     bodyCardDiv
-                        .append($(`<img src=${element.logo} />`).addClass("image-card-body"))
+                        .append($(`<img src=${element.logo} />`).attr("id", element.name).addClass("image-card-body"))
                         .append($("<p>").text("Team Name").addClass("card-body-text text-prop"))
                         .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
                         .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
@@ -78,7 +78,7 @@ $(document).ready(function () {
                 })
 
                 // EVENT FOR SHOWING PLAYERS
-                $(".card").click((event) => {
+                $(".image-card-body").click((event) => {
                     // showPlayers();
                     // event.preventDefault();
                     let targetTeamId = event.currentTarget.id;

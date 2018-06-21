@@ -112,14 +112,17 @@ html,body{
 }
 
 .card-body:hover{
-    cursor: pointer;
-                   
+    background: #33333380
 }
 
 .image-card-body {
     display: block;
     margin: 0 auto;
     width: 60%;
+    
+}
+.image-card-body:hover {
+    cursor: pointer;
     
 }
 
