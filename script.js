@@ -30,33 +30,39 @@ $(document).ready(function () {
         $.getJSON("https://raw.githubusercontent.com/shebinho/nba-lister/master/nba.json", (nba) => {
             let targetConferenceId = event.currentTarget.id;
             let nbaTeams = nba.teams.filter(el => el.conference == targetConferenceId);
-            let sortedRanking = nbaTeams.slice().sort((a, b) => {
-                console.log(` Comparing ${a.ranking} and ${b.ranking}`);
+            let container = $("<div>").attr("id", targetConferenceId).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
 
-                return b.ranking - a.ranking;
 
-            });
+
+            // Sort the sync list based on device platform
+
+
+
+
+
             function showTeams(filteredTeams) {
 
-                let container = $("<div>").attr("id", targetConferenceId).addClass(`container-fluid container-${targetConferenceId}`).appendTo("body");
+
                 let rowDiv = $("<div>").addClass("row").appendTo(container);
                 let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-2 col-lg-4");
                 let cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
                 let bodyCardDiv = $(`<div class='card-body card-body-${targetConferenceId}'>`).appendTo(cardDiv);
-                let results = nbaTeams.sort((a, b) => {
-                    let nameCompare = a.name.localeCompare(b.name);
-                    if (nameCompare !== 0) {
-                        return nameCompare
-                    }
-                })
-                console.log(results);
+                // let results = nbaTeams.sort((a, b) => {
+                //     let nameCompare = a.name.localeCompare(b.name);
+                //     if (nameCompare !== 0) {
+                //         return nameCompare
+                //     }
+                // })
+                // console.log(results);
 
-                let testBtn = $("<i id='ranking' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(container);
+                let testBtn = $("<i id='back' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(container);
 
-                $(container).on("click", "#ranking", function (e) {
+                $(container).on("click", "#back", function (e) {
                     $(container).hide();
                     $(".container123").show();
                 })
+
+
 
                 filteredTeams.forEach(element => {
                     showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
@@ -70,12 +76,57 @@ $(document).ready(function () {
                         .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
                         .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
                         .append($("<p>").text(`${element["season-record"]}`).addClass("card-body-text"))
-                        .append($("<p>").text("Ranking").addClass("card-body-text text-prop"))
-                        .append($("<p>").text(`${element.ranking}`).attr("id", "btnRanking").addClass("card-body-text"))
+                        .append($("<p>").text("Ranking").val(0).attr("id", "btnRanking").addClass("card-body-text text-prop"))
+                        .append($("<p>").text(`${element.ranking}`).addClass("card-body-text"))
+
+
 
                     return bodyCardDiv;
 
+
                 })
+
+
+
+                // let clickedDevicePlatformSorting = $("#btnRanking").hasClass('ASC') ? 'DESC' : 'ASC';
+                // let sortedRanking = nbaTeams.slice().sort(function (a, b) {
+
+                //     if (clickedDevicePlatformSorting == 'ASC' && a.ranking) return b.ranking ? a.ranking - b.ranking : -1;
+                //     else if (b.ranking) return a.ranking ? b.ranking - a.ranking : 1;
+
+                // });
+
+                // sorted from 15-1
+                // let sortedRanking = nbaTeams.slice().sort((a, b) => {
+                //     return b.ranking - a.ranking
+                // })
+
+                // sorted from 1-15
+                // let sortedRanking = nbaTeams.slice().sort((a, b) => {
+                //     return a.ranking - b.ranking
+                // })
+
+                $(container).on("click", "#btnRanking", function (e) {
+                    $(container).html("");
+                    if (e.target.value == 0) {
+                        let sortedRanking = nbaTeams.sort((a, b) => a.ranking - b.ranking);
+
+                        showTeams(sortedRanking);
+                    } else {
+                        let sortedRanking = nbaTeams.sort((a, b) => b.ranking - a.ranking);
+                        showTeams(sortedRanking);
+                    }
+                    $("#btnRanking").val(1);
+
+                })
+
+
+
+
+
+
+
+
 
                 // EVENT FOR SHOWING PLAYERS
                 $(".image-card-body").click((event) => {
@@ -122,6 +173,10 @@ $(document).ready(function () {
             }
 
             showTeams(nbaTeams);
+
+
+
+
 
 
 
