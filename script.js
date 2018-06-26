@@ -110,14 +110,14 @@ $(document).ready(function () {
                     $(container).html("");
                     if (e.target.value == 0) {
                         let sortedRanking = nbaTeams.sort((a, b) => a.ranking - b.ranking);
-
+                        $("#btnRanking").val(1);
                         showTeams(sortedRanking);
                     } else {
                         let sortedRanking = nbaTeams.sort((a, b) => b.ranking - a.ranking);
+                        $("#btnRanking").val(0);
                         showTeams(sortedRanking);
-                    }
-                    $("#btnRanking").val(1);
 
+                    }
                 })
 
 
