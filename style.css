@@ -6,7 +6,42 @@
     --speed: 1000ms;
     --east-conf-color: #0066ab;
     --west-conf-color: #ee174a;
-    
+    /*Team Colors On Card Hover :
+EAST:
+*/
+    --atlanta-hawks-color: #E03A3E;
+    --boston-celtics-color: #007A33;
+    --brooklyn-nets-color: #000000;
+    --charlotte-hornets-color: #1D1160;
+    --chicago-bulls-color: #CE1141;
+    --cleveland-cavaliers-color:#6F263D;
+    --detorit-pistons-color: #ED174C;
+    --indiana-pacers-color: #FDBB30;
+    --miami-heat-color: #98002E;
+    --milwaukee-bucks-color: #00471B;
+    --new-york-knicks-color: #F58426;
+    --orlando-magic-color: #0077C0;
+    --philadelphia-76ers-color: #006BB6;
+    --toronto-raptors-color: #CE1141;
+    --washington-wizards-color: #002B5C;
+
+/* WEST */
+
+--dallas-mavericks-color: #00538C;
+--denver-nuggets-color: #0E2240;
+--golden-state-warriors-color: #FDB927;
+--houston-rockets-color: #C4CED4;
+--los-angeles-clippers-color: #006BB6;
+--los-angeles-lakers-color: #FDB927;
+--memphis-grizzlies-color: #6189B9;
+--minnesota-timberwolves-color: #0C2340;
+--new-orleans-pelicans-color: #0C2340;
+--oklahoma-city-thunder-color: #007AC1;
+--phoenix-suns-color: #1D1160;
+--portland-trail-blazers-color: #E03A3E;
+--sacramento-kings-color: #5A2D81;
+--san-antonio-spurs-color: #C4CED4;
+--utah-jazz-color: #002B5C;
 }
 
   /* inherit border-box on all elements in the universe and before and after
@@ -30,7 +65,7 @@ html,body{
   box-sizing: inherit;
 }
 
-.container123{
+.main-container{
     position: relative;
     width: 100%;
     height: 100%;
@@ -93,7 +128,9 @@ html,body{
 
 .card{
     padding-top: 3%;  
+    background-color: transparent;
 }
+
 
 .card-body-east{
     border: solid 10px silver;
@@ -162,6 +199,156 @@ html,body{
     cursor: pointer;
 }
 
+.fa-arrow-up, .fa-arrow-down{
+    margin-left: 1%;
+    padding-left: 1%;
+    cursor: pointer;
+}
+#btnRanking{
+    margin-left: 10%;
+}
+
 .paraBack{
     padding-left: 0.3%;
 }
+
+/*Team Colors On Card Hover :
+/***************** EAST **********************
+*/
+.card-AtlantaHawks:hover{
+    background-color: var(--atlanta-hawks-color);
+    border: solid 10px #C1D32F;
+}
+
+.card-BostonCeltics:hover{
+    background-color: var(--boston-celtics-color);
+    border: solid 10px #963821;
+}
+
+.card-BrooklynNets:hover{
+    background-color: var(--brooklyn-nets-color);
+}
+
+.card-CharlotteHornets:hover{
+    background-color: var(--charlotte-hornets-color);
+    border: solid 10px #00788C;
+}
+
+.card-ChicagoBulls:hover{
+    background-color: var(--chicago-bulls-color);
+    border: solid 10px #000000;
+}
+
+.card-ClevelandCavaliers:hover{
+    background-color: var(--cleveland-cavaliers-color);
+    border: solid 10px #FFB81C;
+}
+
+.card-DetroitPistons:hover{
+    background-color: var(--detorit-pistons-color);
+    border: solid 10px #006BB6;
+}
+
+.card-IndianaPacers:hover{
+    background-color: var(--indiana-pacers-color);
+    border: solid 10px #002D62;
+}
+
+.card-MiamiHeat:hover{
+    background-color: var(--miami-heat-color);
+    border: solid 10px #F9A01B;
+}
+
+.card-MilwaukeeBucks:hover{
+    background-color: var(--milwaukee-bucks-color);
+    border: solid 10px #EEE1C6;
+}
+
+.card-NewYorkKnicks:hover{
+    background-color: var(--new-york-knicks-color);
+    border: solid 10px #006BB6;
+}
+
+.card-OrlandoMagic:hover{
+    background-color: var(--orlando-magic-color);
+    border: solid 10px #C4CED4;
+}
+
+.card-Philadelphia76ers:hover{
+    background-color: var(--philadelphia-76ers-color);
+    border: solid 10px #ED174C;
+}
+
+.card-TorontoRaptors:hover{
+    background-color: var(--toronto-raptors-color);
+    border: solid 10px #000000;
+}
+
+.card-WashingtonWizards:hover{
+    background-color: var(--washington-wizards-color);
+    border: solid 10px #E31837;
+}
+
+
+/***************** WEST **********************/
+.card-DallasMavericks:hover{
+    background-color: var(--dallas-mavericks-color);
+    border: solid 10px #B8C4CA;
+}
+.card-DenverNuggets:hover{
+    background-color: var(--denver-nuggets-color);
+    border: solid 10px #FEC524;
+}
+.card-GoldenStateWarriors:hover{
+    background-color: var(--golden-state-warriors-color);
+    border: solid 10px #006BB6;
+}
+.card-HoustonRockets:hover{
+    background-color: var(--houston-rockets-color);
+    border: solid 10px #CE1141;
+}
+.card-LosAngelesClippers:hover{
+    background-color: var(--los-angeles-clippers-color);
+    border: solid 10px #ED174C;
+}
+.card-LosAngelesLakers:hover{
+    background-color: var(--los-angeles-lakers-color);
+    border: solid 10px #552583;
+}
+.card-MemphisGrizzlies:hover{
+    background-color: var(--memphis-grizzlies-color);
+    border: solid 10px #00285E;
+}
+.card-MinnesotaTimberwolves:hover{
+    background-color: var(--minnesota-timberwolves-color);
+    border: solid 10px #236192;
+}
+.card-NewOrleansPelicans:hover{
+    background-color: var(--new-orleans-pelicans-color);
+    border: solid 10px #C8102E;
+}
+.card-OklahomaCityThunder:hover{
+    background-color: var(--oklahoma-city-thunder-color);
+    border: solid 10px #EF3B24;
+}
+.card-PhoenixSuns:hover{
+    background-color: var(--phoenix-suns-color);
+    border: solid 10px #E56020;
+}
+.card-PortlandTrailBlazers:hover{
+    background-color: var(--portland-trail-blazers-color);
+    border: solid 10px #000000;
+}
+.card-SacramentoKings:hover{
+    background-color: var(--sacramento-kings-color);
+    border: solid 10px #63727A;
+}
+.card-SanAntonioSpurs:hover{
+    background-color: var(--san-antonio-spurs-color);
+    border: solid 10px #000000;
+}
+.card-UtahJazz:hover{
+    background-color: var(--utah-jazz-color);
+    border: solid 10px #F9A01B;
+}
+
