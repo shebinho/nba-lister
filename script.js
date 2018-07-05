@@ -60,23 +60,28 @@ $(document).ready(function () {
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
         });
 
-        $('.paraBack').click((e) => {
+        $('body').on("click", ".paraBack", function (e) {
+            $(".navbar").html("");
             $(".container-fluid").html("");
             $(".main-container").show();
         })
 
         //Sorting by Ranking 15-1
         $('body').on("click", ".btnRankingDown", function (e) {
+            $(".navbar").html("");
             $(".container-fluid").html("");
             console.log(conference);
             showTeams(filterRankingDown(nbaTeams, conference), conference);
+
         })
 
         //Sorting by Ranking 1-15
         $('body').on("click", ".btnRankingUp", function (e) {
+            $(".navbar").html("");
             $(".container-fluid").html("");
             console.log(conference);
             showTeams(filterRankingUp(nbaTeams, conference), conference);
+
         })
 
 
