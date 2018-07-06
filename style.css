@@ -199,15 +199,6 @@ html,body{
     cursor: pointer;
 }
 
-.fa-arrow-up, .fa-arrow-down{
-    margin-left: 1%;
-    padding-left: 1%;
-    cursor: pointer;
-}
-#btnRanking{
-    margin-left: 10%;
-}
-
 .paraBack{
     padding-left: 0.3%;
 }

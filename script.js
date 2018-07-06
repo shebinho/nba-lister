@@ -56,20 +56,26 @@ $(document).ready(function () {
         // Za Selection na Team
         $(`body`).on("click", `img[name="team"]`, function (e) {
             e.preventDefault();
-            $(".container-fluid").html("");
+            $(".navbar").remove();
+            $(".container-fluid").remove();
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
         });
 
-        $('body').on("click", ".paraBack", function (e) {
-            $(".navbar").html("");
-            $(".container-fluid").html("");
+        $('body').on("click", "#btnBackToMainPage", function (e) {
+            $(".navbar").remove();
+            $(".container-teams").remove();
             $(".main-container").show();
+        })
+
+        $('body').on("click", "#btnBackToTeams", function (e) {
+            $(".container-players").remove();
+            showTeams(filterConference(nbaTeams, conference), conference);
         })
 
         //Sorting by Ranking 15-1
         $('body').on("click", ".btnRankingDown", function (e) {
-            $(".navbar").html("");
-            $(".container-fluid").html("");
+            $(".navbar").remove();
+            $(".container-fluid").remove();
             console.log(conference);
             showTeams(filterRankingDown(nbaTeams, conference), conference);
 
@@ -77,10 +83,27 @@ $(document).ready(function () {
 
         //Sorting by Ranking 1-15
         $('body').on("click", ".btnRankingUp", function (e) {
-            $(".navbar").html("");
-            $(".container-fluid").html("");
+            $(".navbar").remove();
+            $(".container-fluid").remove();
             console.log(conference);
             showTeams(filterRankingUp(nbaTeams, conference), conference);
+
+        })
+
+        //Sorting by Ranking 1-15
+        $('body').on("click", ".btnNameAsc", function (e) {
+            $(".navbar").remove();
+            $(".container-fluid").remove();
+            console.log(conference);
+            showTeams(filterNameAsc(nbaTeams, conference), conference);
+
+        })
+
+        $('body').on("click", ".btnNameDesc", function (e) {
+            $(".navbar").remove();
+            $(".container-fluid").remove();
+            console.log(conference);
+            showTeams(filterNameDesc(nbaTeams, conference), conference);
 
         })
 
@@ -96,6 +119,7 @@ $(document).ready(function () {
 
     function filterRankingDown(teams, conference) {
         let newTeam = JSON.parse(teams);
+        console.log(newTeam);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
         let sortedRanking = sortedTeams.sort((a, b) => a.ranking - b.ranking);
         return sortedRanking;
@@ -108,14 +132,29 @@ $(document).ready(function () {
         return sortedRanking;
     }
 
+    function filterNameAsc(teams, conference) {
+        let newTeam = JSON.parse(teams);
+        let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
+        let sortedNames = sortedTeams.sort((a, b) => a.name.localeCompare(b.name))
+        return sortedNames
+    }
+
+    function filterNameDesc(teams, conference) {
+        let newTeam = JSON.parse(teams);
+        let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
+        console.log(sortedTeams);
+        let sortedNames = sortedTeams.sort((a, b) => b.name.localeCompare(a.name))
+        return sortedNames
+    }
+
     function showTeams(filteredTeams, conf) {
         // console.log(filteredTeams);
-        let container = $("<div>").attr("id", filteredTeams[0].conference).addClass(`container-fluid container-${filteredTeams[0].conference}`).appendTo("body");
+        let container = $("<div>").attr("id", filteredTeams[0].conference).addClass(`container-fluid container-${filteredTeams[0].conference} container-teams`).appendTo("body");
         let data = getData();
         let dataParse = JSON.parse(data);
-        let navbar = $("<nav class='navbar navbar-expand-lg navbar-light bg-light'></nav>");
+        let navbar = $("<nav class='navbar navbar-expand-lg navbar-light bg-light'></nav>").append($("<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>"));
         $(container).before(navbar);
-        let navbarBrand = $("<a class='navbar-brand' href='#'></a>").appendTo(navbar);
+        let navbarBrand = $("<a class='navbar-brand' href='#'></a>").prependTo(navbar);
         navbarBrand.append($(`<img src=${dataParse.media.img.league[conf]} width='60' height='60' class='d-inline-block align-top conference-logo' alt=''>`));
         let navbarCollapse = $("<div class='collapse navbar-collapse' id='navbarSupportedContent'></div>").appendTo(navbar);
         navbarCollapse.append($("<ul class='navbar-nav mr-auto'></ul>")
@@ -123,7 +162,12 @@ $(document).ready(function () {
                 .append($("<a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Ranking</a>"))
                 .append($("<div class='dropdown-menu' aria-labelledby='navbarDropdown'></div>")
                     .append($("<a class='dropdown-item btnRankingDown' href='#'>By Ascending</a>"))
-                    .append($("<a class='dropdown-item btnRankingUp' href='#'>By Descending</a>")))));
+                    .append($("<a class='dropdown-item btnRankingUp' href='#'>By Descending</a>"))))
+            .append($("<li class='nav-item dropdown'></li>'")
+                .append($("<a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Name</a>"))
+                .append($("<div class='dropdown-menu' aria-labelledby='navbarDropdown'></div>")
+                    .append($("<a class='dropdown-item btnNameAsc' href='#'>By Ascending</a>"))
+                    .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))));
 
 
         // console.log(`<img src=${dataParse.media.img.league[conf]}`)
@@ -132,7 +176,7 @@ $(document).ready(function () {
         let showTeamsDiv = $("<div>").addClass("col-xs-1 col-sm-4 col-md-2 col-lg-4");
         let cardDiv = $("<div class='card'>").appendTo(showTeamsDiv);
         let bodyCardDiv = $(`<div class='card-body card-body-${filteredTeams[0].conference}'>`).appendTo(cardDiv);
-        let testBtn = $("<i id='back' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(container);
+        let testBtn = $("<i id='btnBackToMainPage' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(container);
 
         filteredTeams.forEach(element => {
             showTeamsDiv = $(`<div id='${element.name}'>`).addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
@@ -145,9 +189,7 @@ $(document).ready(function () {
                 .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
                 .append($("<p>").text("Season Record").addClass("card-body-text text-prop"))
                 .append($("<p>").text(`${element["season-record"]}`).addClass("card-body-text"))
-                .append($("<p>").text("Ranking").attr("id", "btnRanking").addClass("card-body-text text-prop")
-                    .append($("<span class='btnRankingUp'><i class='fas fa-arrow-up'></i></span>").css("color", "green"))
-                    .append($("<span class='btnRankingDown'><i class='fas fa-arrow-down'></i></span>").css("color", "red")))
+                .append($("<p>").text("Ranking").attr("id", "btnRanking").addClass("card-body-text text-prop"))
                 .append($("<p>").text(`${element.ranking}`).addClass("card-body-text"))
 
         })
@@ -155,12 +197,14 @@ $(document).ready(function () {
 
     function showPlayers(nbaTeams, team) {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
+        console.log(teamPlayers);
         let firstTeam = $(`<button class="btn btn-block">`).html("Starters");
         let subs = $(`<button class="btn btn-block">`).html("Substitutions");
         let containerTeams = $("<div>").attr({ "id": team })
-            .addClass(`container-fluid container-${teamPlayers[0].conference}`)
+            .addClass(`container-fluid container-${teamPlayers[0].conference} container-players`)
             .appendTo("body");
         let rowDiv = $("<div>").addClass("row").appendTo(containerTeams);
+        let testBtn = $("<i id='btnBackToTeams' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(containerTeams);
 
         teamPlayers.forEach(element => {
 
@@ -173,7 +217,8 @@ $(document).ready(function () {
                 }
                 showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
                 cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
-                bodyCardDiv = $(`<div class='card-body card-body-${teamPlayers[0].conference}'>`).appendTo(cardDiv);
+                bodyCardDiv = $(`<div class='card-body card-${team.replace(/\s/g, "")} card-body-${teamPlayers[0].conference}'>`).appendTo(cardDiv);
+
 
 
                 bodyCardDiv
