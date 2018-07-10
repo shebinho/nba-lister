@@ -44,6 +44,8 @@ $(document).ready(function () {
             mainContainer.classList.remove("hover-right");
         });
 
+
+
         // Za selection na conference
         $(".split").click((event) => {
             event.preventDefault();
@@ -52,6 +54,37 @@ $(document).ready(function () {
             $("#hide").hide();
             showTeams(filterConference(nbaTeams, conference), conference);
         });
+        // Za Autocomplete na input
+        let playerSuggestions = [];
+        let players = getData();
+        let parsePlayers = JSON.parse(players);
+        // console.log(parsePlayers);
+        parsePlayers.teams.forEach(element => {
+            element.players.forEach(element => {
+                playerSuggestions.push(element.name);
+            })
+        });
+        $("#p1").autocomplete({
+            source: playerSuggestions,
+            minLength: 2
+        })
+
+        $("#p2").autocomplete({
+            source: playerSuggestions,
+            minLength: 2
+        })
+
+        $('modalPlayers').modal('show');
+        $("#p1").autocomplete("option", "appendTo", ".modal-autocomplete");
+        $('modalPlayers').modal('show');
+        $("#p2").autocomplete("option", "appendTo", ".modal-autocomplete");
+
+        //Compare Players Button 
+        $('body').on('submit', function (e) {
+            e.preventDefault();
+            playersModal();
+
+        })
 
         // Za Selection na Team
         $(`body`).on("click", `img[name="team"]`, function (e) {
@@ -147,6 +180,82 @@ $(document).ready(function () {
         return sortedNames
     }
 
+    function playersModal() {
+
+        $(".modal").show();
+        let p1 = $("#p1").val();
+        let p2 = $("#p2").val();
+        let nba = JSON.parse(getData());
+        console.log(nba)
+        let pc1 = [];
+        let pc2 = [];
+        let cardBodyPlayerOne;
+        let cardBodyPlayerTwo;
+
+        nba.teams.forEach(team => {
+            team.players.filter(player => {
+                if (player.name === p1) {
+                    pc1.push(player)
+                    console.log(player);
+                    cardBodyPlayerOne = $(`<div class='card card-body card-${team.name.replace(/\s/g, "")} card-body-${team.conference}'</div>`)
+                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>").append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`)));
+                }
+
+
+                if (player.name === p2) {
+                    pc2.push(player)
+                    cardBodyPlayerTwo = $(`<div class='card card-body card-${team.name.replace(/\s/g, "")} card-body-${team.conference}'</div>`)
+                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>").append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`)));
+                }
+
+            })
+        })
+        console.log(pc1)
+        console.log(pc2)
+
+        pc1[0].stats.forEach((stat, i) => {
+            if (stat.PTS > pc2[0].stats[0].PTS) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>PTS: ${stat.PTS}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>PTS: ${pc2[0].stats[0].PTS}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
+            }
+
+            if (stat.AST > pc2[0].stats[0].AST) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>AST: ${stat.AST}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>AST: ${pc2[0].stats[0].AST}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
+            }
+
+            if (stat.REB > pc2[0].stats[0].REB) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>REB: ${stat.REB}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>REB: ${pc2[0].stats[0].REB}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
+            }
+
+            if (stat.STL > pc2[0].stats[0].STL) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>STL: ${stat.STL}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>STL: ${pc2[0].stats[0].STL}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
+            }
+
+            if (stat.BLK > pc2[0].stats[0].BLK) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>BLK: ${stat.BLK}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-west'>BLK: ${pc2[0].stats[0].BLK}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
+            }
+
+        })
+
+        cardBodyPlayerOne.appendTo(".column-playerOne");
+        cardBodyPlayerTwo.appendTo(".column-playerTwo");
+
+    }
+
     function showTeams(filteredTeams, conf) {
         // console.log(filteredTeams);
         let container = $("<div>").attr("id", filteredTeams[0].conference).addClass(`container-fluid container-${filteredTeams[0].conference} container-teams`).appendTo("body");
@@ -163,11 +272,11 @@ $(document).ready(function () {
                 .append($("<div class='dropdown-menu' aria-labelledby='navbarDropdown'></div>")
                     .append($("<a class='dropdown-item btnRankingDown' href='#'>By Ascending</a>"))
                     .append($("<a class='dropdown-item btnRankingUp' href='#'>By Descending</a>"))))
-            .append($("<li class='nav-item dropdown'></li>'")
+            .append($("<li class='nav-item dropdown'></li>")
                 .append($("<a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Name</a>"))
                 .append($("<div class='dropdown-menu' aria-labelledby='navbarDropdown'></div>")
                     .append($("<a class='dropdown-item btnNameAsc' href='#'>By Ascending</a>"))
-                    .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))));
+                    .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))).append($("<li class='nav-item'></li>").append($("<button type='button' class='btn btn-primary' data-toggle='modal' data-target='.bd-example-modal-lg'>Compare Players</button>"))));
 
 
         // console.log(`<img src=${dataParse.media.img.league[conf]}`)
@@ -179,7 +288,7 @@ $(document).ready(function () {
         let testBtn = $("<i id='btnBackToMainPage' class='fas fa-arrow-circle-left'><span class='paraBack'>Back</span></i>").appendTo(container);
 
         filteredTeams.forEach(element => {
-            showTeamsDiv = $(`<div id='${element.name}'>`).addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
+            showTeamsDiv = $(`<div id='${element.name}'>`).addClass("col-xs-2 col-sm-2 col-md-4 col-lg-4").appendTo(rowDiv);
             cardDiv = $(`<div class='card'>`).appendTo(showTeamsDiv);
             bodyCardDiv = $(`<div class='card-body card-body-${filteredTeams[0].conference} card-${element.name.replace(/\s/g, "")}'>`).appendTo(cardDiv);
 

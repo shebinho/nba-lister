@@ -64,6 +64,55 @@ html,body{
 *:after {
   box-sizing: inherit;
 }
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;   
+    padding: 4px 0;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
 
 .main-container{
     position: relative;
@@ -131,6 +180,16 @@ html,body{
     background-color: transparent;
 }
 
+.img-pos{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    left: 55%;
+}
+
+.img-vs{
+    margin-right: 8%;
+}
 
 .card-body-east{
     border: solid 10px silver;
@@ -199,8 +258,21 @@ html,body{
     cursor: pointer;
 }
 
+.fa-arrow-up{
+    color: green;
+    margin-left: 7%;
+}
+
+.fa-arrow-down{
+    color: darkred;
+    margin-left: 7%;
+}
+
 .paraBack{
     padding-left: 0.3%;
+}
+.modal-player-name-text{
+    font-size: 0.6vw;
 }
 
 /*Team Colors On Card Hover :
@@ -342,4 +414,6 @@ html,body{
     background-color: var(--utah-jazz-color);
     border: solid 10px #F9A01B;
 }
+
+
 
