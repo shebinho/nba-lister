@@ -276,7 +276,7 @@ $(document).ready(function () {
                 .append($("<a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Name</a>"))
                 .append($("<div class='dropdown-menu' aria-labelledby='navbarDropdown'></div>")
                     .append($("<a class='dropdown-item btnNameAsc' href='#'>By Ascending</a>"))
-                    .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))).append($("<li class='nav-item'></li>").append($("<button type='button' class='btn btn-primary' data-toggle='modal' data-target='.bd-example-modal-lg'>Compare Players</button>"))));
+                    .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))).append($("<li class='nav-item'></li>").append($("<button type='button' class='btn btn-secondary' data-toggle='modal' data-target='.bd-example-modal-lg'>Compare Players</button>"))));
 
 
         // console.log(`<img src=${dataParse.media.img.league[conf]}`)
