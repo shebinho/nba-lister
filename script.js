@@ -11,7 +11,6 @@ $(document).ready(function () {
             },
             error: function (data) {
                 console.log("Error");
-                alert("Error");
             }
 
         })
@@ -28,15 +27,15 @@ $(document).ready(function () {
 
         // Za Hover na main page
 
-        $(left).on("mouseenter",() =>{
+        $(left).on("mouseenter", () => {
             $(mainContainer).addClass("hover-left");
-        }).on("mouseleave", () =>{
+        }).on("mouseleave", () => {
             $(mainContainer).removeClass("hover-left");
         })
 
-        $(right).on("mouseenter",() =>{
+        $(right).on("mouseenter", () => {
             $(mainContainer).addClass("hover-right");
-        }).on("mouseleave",() =>{
+        }).on("mouseleave", () => {
             $(mainContainer).removeClass("hover-right");
         })
 
@@ -44,7 +43,6 @@ $(document).ready(function () {
         $(".split").click((event) => {
             event.preventDefault();
             conference = event.target.id;
-            $(".split").addClass("active");
             $("#hide").hide();
             showTeams(filterConference(nbaTeams, conference), conference);
         });
@@ -52,7 +50,6 @@ $(document).ready(function () {
         let playerSuggestions = [];
         let players = getData();
         let parsePlayers = JSON.parse(players);
-        // console.log(parsePlayers);
         parsePlayers.teams.forEach(element => {
             element.players.forEach(element => {
                 playerSuggestions.push(element.name);
@@ -82,15 +79,16 @@ $(document).ready(function () {
 
         })
 
-        // $(".modal").on("hidden.bs.modal", function(){
-        //     $(".modal-body").html("");
-        // });
+        $(".modal").on("hidden.bs.modal", function () {
+            $(".column-playerOne").html("");
+            $(".column-playerTwo").html("");
+        });
 
         // Za Selection na Team
         $(`body`).on("click", `img[name="team"]`, function (e) {
             e.preventDefault();
             $(".navbar").remove();
-            $(".container-fluid").remove();
+            $(".container-teams").remove();
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
         });
 
@@ -109,8 +107,7 @@ $(document).ready(function () {
         //Sorting by Ranking 15-1
         $('body').on("click", ".btnRankingDown", function (e) {
             $(".navbar").remove();
-            $(".container-fluid").remove();
-            console.log(conference);
+            $(".container-teams").remove();
             showTeams(filterRankingDown(nbaTeams, conference), conference);
 
         })
@@ -118,8 +115,7 @@ $(document).ready(function () {
         //Sorting by Ranking 1-15
         $('body').on("click", ".btnRankingUp", function (e) {
             $(".navbar").remove();
-            $(".container-fluid").remove();
-            console.log(conference);
+            $(".container-teams").remove();
             showTeams(filterRankingUp(nbaTeams, conference), conference);
 
         })
@@ -127,16 +123,14 @@ $(document).ready(function () {
         //Sorting by Ranking 1-15
         $('body').on("click", ".btnNameAsc", function (e) {
             $(".navbar").remove();
-            $(".container-fluid").remove();
-            console.log(conference);
+            $(".container-teams").remove();
             showTeams(filterNameAsc(nbaTeams, conference), conference);
 
         })
 
         $('body').on("click", ".btnNameDesc", function (e) {
             $(".navbar").remove();
-            $(".container-fluid").remove();
-            console.log(conference);
+            $(".container-teams").remove();
             showTeams(filterNameDesc(nbaTeams, conference), conference);
 
         })
@@ -153,7 +147,6 @@ $(document).ready(function () {
 
     function filterRankingDown(teams, conference) {
         let newTeam = JSON.parse(teams);
-        console.log(newTeam);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
         let sortedRanking = sortedTeams.sort((a, b) => a.ranking - b.ranking);
         return sortedRanking;
@@ -176,7 +169,6 @@ $(document).ready(function () {
     function filterNameDesc(teams, conference) {
         let newTeam = JSON.parse(teams);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
-        console.log(sortedTeams);
         let sortedNames = sortedTeams.sort((a, b) => b.name.localeCompare(a.name))
         return sortedNames
     }
@@ -199,7 +191,6 @@ $(document).ready(function () {
                 if (player.name === p1) {
                     team1.push(team);
                     pc1.push(player)
-                    console.log(player);
                     cardBodyPlayerOne = $(`<div class='card card-body card-${team.name.replace(/\s/g, "")} card-body-${team.conference}'</div>`)
                         .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>").append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`)));
                 }
@@ -214,11 +205,9 @@ $(document).ready(function () {
 
             })
         })
-        console.log(pc1)
-        console.log(pc2)
 
         pc1[0].stats.forEach((stat, i) => {
-            if(p1 === p2){
+            if (p1 === p2) {
                 $(".column-playerOne").append($("<p>").text("You can't compare same player twice!"));
                 $(".column-playerTwo").append($("<p>").text("You can't compare same player twice!"));
 
@@ -302,7 +291,6 @@ $(document).ready(function () {
     }
 
     function showTeams(filteredTeams, conf) {
-        // console.log(filteredTeams);
         let container = $("<div>").attr("id", filteredTeams[0].conference).addClass(`container-fluid container-${filteredTeams[0].conference} container-teams`).appendTo("body");
         let data = getData();
         let dataParse = JSON.parse(data);
@@ -323,8 +311,6 @@ $(document).ready(function () {
                     .append($("<a class='dropdown-item btnNameAsc' href='#'>By Ascending</a>"))
                     .append($("<a class='dropdown-item btnNameDesc' href='#'>By Descending</a>")))).append($("<li class='nav-item'></li>").append($("<button type='button' class='btn btn-secondary' data-toggle='modal' data-target='.bd-example-modal-lg'>Compare Players</button>"))));
 
-
-        // console.log(`<img src=${dataParse.media.img.league[conf]}`)
 
         let rowDiv = $("<div>").addClass("row").appendTo(container);
         let showTeamsDiv = $("<div>");
@@ -351,7 +337,6 @@ $(document).ready(function () {
 
     function showPlayers(nbaTeams, team) {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
-        console.log(teamPlayers);
         let firstTeam = $(`<button class="btn btn-block">`).html("Starters");
         let subs = $(`<button class="btn btn-block">`).html("Substitutions");
         let containerTeams = $("<div>").attr({ "id": team })
