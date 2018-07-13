@@ -74,7 +74,8 @@ $(document).ready(function () {
         $('body').on('submit', function (e) {
             e.preventDefault();
             document.getElementsByClassName("modal-body")[0].children[0].children[0].children[0].innerHTML = "";
-            document.getElementsByClassName("modal-body")[0].children[0].children[0].children[2].innerHTML = "";
+            document.getElementsByClassName("modal-body")[0].children[0].children[0].children[1].innerHTML = "";
+            document.getElementsByClassName("modal-body")[0].children[0].children[0].children[3].innerHTML = "";
             playersModal();
 
         })
@@ -82,6 +83,7 @@ $(document).ready(function () {
         $(".modal").on("hidden.bs.modal", function () {
             $(".column-playerOne").html("");
             $(".column-playerTwo").html("");
+
         });
 
         // Za Selection na Team
@@ -207,11 +209,14 @@ $(document).ready(function () {
         })
 
         pc1[0].stats.forEach((stat, i) => {
-            if (p1 === p2) {
-                $(".column-playerOne").append($("<p>").text("You can't compare same player twice!"));
-                $(".column-playerTwo").append($("<p>").text("You can't compare same player twice!"));
 
+            if (stat.PTS === pc2[0].stats[0].PTS) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>PTS: ${stat.PTS}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>PTS: ${pc2[0].stats[0].PTS}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
             }
+
             if (stat.PTS > pc2[0].stats[0].PTS) {
                 let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
                 let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
@@ -224,6 +229,13 @@ $(document).ready(function () {
                 let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
                 statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>PTS: ${stat.PTS}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
                 statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>PTS: ${pc2[0].stats[0].PTS}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+            }
+
+            if (stat.AST === pc2[0].stats[0].AST) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>AST: ${stat.AST}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>AST: ${pc2[0].stats[0].AST}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
             }
 
             if (stat.AST > pc2[0].stats[0].AST) {
@@ -240,6 +252,13 @@ $(document).ready(function () {
                 statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>AST: ${pc2[0].stats[0].AST}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
             }
 
+            if (stat.REB === pc2[0].stats[0].REB) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>REB: ${stat.REB}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>REB: ${pc2[0].stats[0].REB}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+            }
+
             if (stat.REB > pc2[0].stats[0].REB) {
                 let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
                 let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
@@ -254,6 +273,13 @@ $(document).ready(function () {
                 statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>REB: ${pc2[0].stats[0].REB}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
             }
 
+            if (stat.STL === pc2[0].stats[0].STL) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>STL: ${stat.STL}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>STL: ${pc2[0].stats[0].STL}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+            }
+
             if (stat.STL > pc2[0].stats[0].STL) {
                 let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
                 let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
@@ -266,6 +292,13 @@ $(document).ready(function () {
                 let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
                 statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>STL: ${stat.STL}</li>`).append($("<span><i class='fas fa-arrow-down'></i></span>")))
                 statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>STL: ${pc2[0].stats[0].STL}</li>`).append($("<span><i class='fas fa-arrow-up'></i></span>")))
+            }
+
+            if (stat.BLK === pc2[0].stats[0].BLK) {
+                let statsListPlayerOne = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerOne);
+                let statsListPlayerTwo = $("<div class='list-group list-group-flush'></div>").appendTo(cardBodyPlayerTwo);
+                statsListPlayerOne.append($(`<li class='list-group-item card-body-text text-prop card-body-${team1[0].conference}'>BLK: ${stat.BLK}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
+                statsListPlayerTwo.append($(`<li class='list-group-item card-body-text text-prop card-body-${team2[0].conference}'>BLK: ${pc2[0].stats[0].BLK}</li>`).append($("<span><i class='fas fa-arrows-alt-h'></i></span>")))
             }
 
             if (stat.BLK > pc2[0].stats[0].BLK) {
@@ -284,8 +317,22 @@ $(document).ready(function () {
 
         })
 
-        cardBodyPlayerOne.appendTo(".column-playerOne");
-        cardBodyPlayerTwo.appendTo(".column-playerTwo");
+        if (p1 === p2) {
+            $(".column-playerOne").html("");
+            $(".column-playerOne").html("");
+            $(`<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>You can't compare same player twice !</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>`).appendTo(".alert-compare");
+
+
+        }else{
+            cardBodyPlayerOne.appendTo(".column-playerOne");
+            cardBodyPlayerTwo.appendTo(".column-playerTwo");
+        }
+
 
 
     }
