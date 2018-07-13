@@ -118,6 +118,7 @@ $(document).ready(function () {
 
         $('body').on("click", ".btnBackToPlayers", function (e) {
             $(".stats-container").remove();
+            $('.container-players').remove();
             console.log(e);
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
 
