@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    /************************ GITHUB(Shebinho) API ********************/
     function getData() {
         let nbaTeams;
         $.ajax({
@@ -18,6 +19,8 @@ $(document).ready(function () {
     }
 
 
+
+    /************************ Main Function to start the Web App ********************/
     function init() {
         const nbaTeams = getData();
         const left = $(".left");
@@ -26,8 +29,10 @@ $(document).ready(function () {
         let conference;
         let team;
 
-        // Za Hover na main page
+        //************************ EVENTS ********************/
 
+
+        // Main Page for Hover Effect
         $(left).on("mouseenter", () => {
             $(mainContainer).addClass("hover-left");
         }).on("mouseleave", () => {
@@ -40,14 +45,14 @@ $(document).ready(function () {
             $(mainContainer).removeClass("hover-right");
         })
 
-        // Za selection na conference
+        // Conference Selection
         $(".split").click((event) => {
             event.preventDefault();
             conference = event.target.id;
             $("#hide").hide();
             showTeams(filterConference(nbaTeams, conference), conference);
         });
-        // Za Autocomplete na input
+        // Autocomplete for the input
         let playerSuggestions = [];
         let players = getData();
         let parsePlayers = JSON.parse(players);
@@ -66,12 +71,13 @@ $(document).ready(function () {
             minLength: 2
         })
 
+        // Append AutoComplete to the Modal
         $('modalPlayers').modal('show');
         $("#p1").autocomplete("option", "appendTo", ".modal-autocomplete");
         $('modalPlayers').modal('show');
         $("#p2").autocomplete("option", "appendTo", ".modal-autocomplete");
 
-        //Compare Players Button
+        // Compare Players Button
         $('body').on('submit', function (e) {
             e.preventDefault();
             document.getElementsByClassName("modal-body")[0].children[0].children[0].children[0].innerHTML = "";
@@ -81,13 +87,14 @@ $(document).ready(function () {
 
         })
 
+        // When Modal is closed
         $(".modal").on("hidden.bs.modal", function () {
             $(".column-playerOne").html("");
             $(".column-playerTwo").html("");
 
         });
 
-        // Za Selection na Team
+        // Team Selection
         $(`body`).on("click", `img[name="team"]`, function (e) {
             e.preventDefault();
             $(".navbar").remove();
@@ -96,6 +103,7 @@ $(document).ready(function () {
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
         });
 
+        // For Players Stats and Youtube Feeds
         $(`body`).on("click", `img[name="player"]`, function (e) {
             e.preventDefault();
             $(".navbar").remove();
@@ -104,18 +112,21 @@ $(document).ready(function () {
             statsPlayersModal(filterConference(nbaTeams, conference), team, e.target.id)
         });
 
+        // Back to the Main Page
         $('body').on("click", "#btnBackToMainPage", function (e) {
             $(".navbar").remove();
             $(".container-teams").remove();
             $(".main-container").show();
         })
 
+        // Back to the Teams
         $('body').on("click", "#btnBackToTeams", function (e) {
             $(".container-players").remove();
             showTeams(filterConference(nbaTeams, conference), conference);
 
         })
 
+        // Back to the Players
         $('body').on("click", ".btnBackToPlayers", function (e) {
             $(".stats-container").remove();
             $('.container-players').remove();
@@ -124,7 +135,7 @@ $(document).ready(function () {
 
         })
 
-        //Sorting by Ranking 15-1
+        // Sorting by Ranking 15-1
         $('body').on("click", ".btnRankingDown", function (e) {
             $(".navbar").remove();
             $(".container-teams").remove();
@@ -132,7 +143,7 @@ $(document).ready(function () {
 
         })
 
-        //Sorting by Ranking 1-15
+        // Sorting by Ranking 1-15
         $('body').on("click", ".btnRankingUp", function (e) {
             $(".navbar").remove();
             $(".container-teams").remove();
@@ -140,14 +151,14 @@ $(document).ready(function () {
 
         })
 
-        //Sorting by Ranking 1-15
+        // Sorting by Name a-z
         $('body').on("click", ".btnNameAsc", function (e) {
             $(".navbar").remove();
             $(".container-teams").remove();
             showTeams(filterNameAsc(nbaTeams, conference), conference);
 
         })
-
+        // Sorting by Name z-a
         $('body').on("click", ".btnNameDesc", function (e) {
             $(".navbar").remove();
             $(".container-teams").remove();
@@ -155,16 +166,18 @@ $(document).ready(function () {
 
         })
 
-
-        // Za Selection na Team
-
     }
 
+    //************************ FUNCTIONS ********************/
+
+
+    // Filter for Conference
     function filterConference(teams, conference) {
         let newTeam = JSON.parse(teams);
         return newTeam.teams.filter((t) => t.conference == conference);
     }
 
+    // Filter for Ranking by Ascending
     function filterRankingDown(teams, conference) {
         let newTeam = JSON.parse(teams);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
@@ -172,6 +185,7 @@ $(document).ready(function () {
         return sortedRanking;
     }
 
+    // Filter for Ranking by Descending
     function filterRankingUp(teams, conference) {
         let newTeam = JSON.parse(teams);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
@@ -179,6 +193,7 @@ $(document).ready(function () {
         return sortedRanking;
     }
 
+    // Filter for Name by Ascending
     function filterNameAsc(teams, conference) {
         let newTeam = JSON.parse(teams);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
@@ -186,6 +201,7 @@ $(document).ready(function () {
         return sortedNames
     }
 
+    // Filter for Name by Descending
     function filterNameDesc(teams, conference) {
         let newTeam = JSON.parse(teams);
         let sortedTeams = newTeam.teams.filter((t) => t.conference == conference);
@@ -193,6 +209,7 @@ $(document).ready(function () {
         return sortedNames
     }
 
+    // Function for the Compare Players button to open the Modal
     function comparePlayersModal() {
         let p1 = $("#p1").val();
         let p2 = $("#p2").val();
@@ -359,6 +376,8 @@ $(document).ready(function () {
 
     }
 
+
+    // Funtion to Show the Teams
     function showTeams(filteredTeams, conf) {
         let container = $("<div>").attr("id", filteredTeams[0].conference).addClass(`container-fluid container-${filteredTeams[0].conference} container-teams`).appendTo("body");
         let data = getData();
@@ -404,6 +423,7 @@ $(document).ready(function () {
         })
     }
 
+    // Function to Show the Players
     function showPlayers(nbaTeams, team) {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
         let firstTeam = $(`<button class="btn btn-block">`).html("Starters");
@@ -441,6 +461,7 @@ $(document).ready(function () {
         })
     }
 
+    // Function to show the Player Stats and Youtube feeds when player image is clicked
     function statsPlayersModal(nbaTeams, team, playerFilter) {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
         let player = teamPlayers[0].players.filter(p => p.name == playerFilter);
@@ -448,7 +469,7 @@ $(document).ready(function () {
         let statsContainerDiv = $(`<div class='container-fluid stats-container container-${teamPlayers[0].conference}'>`).appendTo("body");
         let statsRowDiv = $("<div class='row'>").appendTo(statsContainerDiv);
         // let playerSearch = getSearchTwitter(player[0].name);  //// for Twitter API
-        statsRowDiv.append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h5>Players Stats:</h5>"))
+        statsRowDiv.append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h2>Players Stats:</h2>"))
             .append($(`<div class='card-body card-${team.replace(/\s/g, "")} card-body-${teamPlayers[0].conference}'>`)
                 .append($(`<img name='player' src='${player[0].img}'/>`).addClass(`image-card-body`))
                 .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
@@ -467,7 +488,7 @@ $(document).ready(function () {
                 .append($("<p>").text(`${statsPlayer[0].STL}`).addClass("card-body-text"))
                 .append($("<p>").text("BLK").addClass("card-body-text text-prop"))
                 .append($("<p>").text(`${statsPlayer[0].BLK}`).addClass("card-body-text"))))
-            .append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h5>Youtube Feeds:</h5>"))
+            .append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h2>Youtube Feeds:</h2>"))
                 .append($(`<iframe class='player-iframe' src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights'></iframe>`))
                 .append($(`<i id='${teamPlayers[0].name}' class='fas fa-arrow-circle-left btnBackToPlayers'><span id='${teamPlayers[0].name}' class='paraBack btnBackToPlayers'>Back</span></i>`)))
         console.log(statsPlayer);
@@ -494,6 +515,8 @@ $(document).ready(function () {
     //     return twitterSearch;
     // }
 
+
+    /************* Call the Main Function ***************/
     init();
 
 });
