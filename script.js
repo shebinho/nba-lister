@@ -24,6 +24,7 @@ $(document).ready(function () {
         const right = $(".right");
         const mainContainer = $(".main-container");
         let conference;
+        let team;
 
         // Za Hover na main page
 
@@ -76,7 +77,7 @@ $(document).ready(function () {
             document.getElementsByClassName("modal-body")[0].children[0].children[0].children[0].innerHTML = "";
             document.getElementsByClassName("modal-body")[0].children[0].children[0].children[1].innerHTML = "";
             document.getElementsByClassName("modal-body")[0].children[0].children[0].children[3].innerHTML = "";
-            playersModal();
+            comparePlayersModal();
 
         })
 
@@ -91,7 +92,16 @@ $(document).ready(function () {
             e.preventDefault();
             $(".navbar").remove();
             $(".container-teams").remove();
+            team = e.target.id;
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
+        });
+
+        $(`body`).on("click", `img[name="player"]`, function (e) {
+            e.preventDefault();
+            $(".navbar").remove();
+            $(".container-teams").remove();
+            $(".container-players").html("");
+            statsPlayersModal(filterConference(nbaTeams, conference), team, e.target.id)
         });
 
         $('body').on("click", "#btnBackToMainPage", function (e) {
@@ -175,7 +185,7 @@ $(document).ready(function () {
         return sortedNames
     }
 
-    function playersModal() {
+    function comparePlayersModal() {
         let p1 = $("#p1").val();
         let p2 = $("#p2").val();
         let nba = JSON.parse(getData());
@@ -194,7 +204,9 @@ $(document).ready(function () {
                     team1.push(team);
                     pc1.push(player)
                     cardBodyPlayerOne = $(`<div class='card card-body card-${team.name.replace(/\s/g, "")} card-body-${team.conference}'</div>`)
-                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>").append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`)));
+                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>")
+                            .append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`))
+                            .append($(`<p class='card-body-text modal-player-name-text'>Position: ${player.position}</p>`)));
                 }
 
 
@@ -202,7 +214,9 @@ $(document).ready(function () {
                     team2.push(team);
                     pc2.push(player)
                     cardBodyPlayerTwo = $(`<div class='card card-body card-${team.name.replace(/\s/g, "")} card-body-${team.conference}'</div>`)
-                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>").append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`)));
+                        .append($(`<img class='card-img-top' src='${player.img}'> `)).append($("<div class='card-body-text mt-2'></div>")
+                            .append($(`<p class='card-body-text modal-player-name-text'>${player.name}</p>`))
+                            .append($(`<p class='card-body-text modal-player-name-text'>Position: ${player.position}</p>`)));
                 }
 
             })
@@ -328,7 +342,7 @@ $(document).ready(function () {
           </div>`).appendTo(".alert-compare");
 
 
-        }else{
+        } else {
             cardBodyPlayerOne.appendTo(".column-playerOne");
             cardBodyPlayerTwo.appendTo(".column-playerTwo");
         }
@@ -408,7 +422,7 @@ $(document).ready(function () {
 
 
                 bodyCardDiv
-                    .append($(`<img src=${element.img} />`).addClass("image-card-body"))
+                    .append($(`<img name='player' src='${element.img}'/>`).attr("id", element.name).addClass(`image-card-body`))
                     .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
                     .append($("<p>").text(`${element.name}`).addClass("card-body-text"))
                     .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
@@ -417,6 +431,39 @@ $(document).ready(function () {
                     .append($("<p>").text(`${element.position}`).addClass("card-body-text"))
             })
         })
+    }
+
+    function statsPlayersModal(nbaTeams, team, playerFilter) {
+        let teamPlayers = nbaTeams.filter(t => t.name == team);
+        let player = teamPlayers[0].players.filter(p => p.name == playerFilter);
+        let statsPlayer = player[0].stats.filter(s => s);
+        let statsContainerDiv = $("<div class='container-fluid stats-container'>").appendTo("body");
+        let statsRowDiv = $("<div class='row'>").appendTo(statsContainerDiv);
+        let playerSearch = getSearchTwitter(player[0].name);
+        console.log(playerSearch);
+        statsRowDiv.append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Twitter Feeds:</h5>"))
+            .append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Players Stats:</h5>")))
+            .append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Youtube Feeds:</h5>"))
+                .append($(`<iframe src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights' height='600' width='700'></iframe>`))))
+        console.log(statsPlayer);
+
+    }
+
+    function getSearchTwitter(name) {
+        let twitterSearch;
+        $.ajax({
+            method: "GET",
+            url: (`https://api.twitter.com/1.1/search/tweets.json?q=${name}&result_type=popular`),
+            async: false,
+            success: function (data) {
+                twitterSearch = data;
+            },
+            error: function (data) {
+                console.log("Error");
+            }
+
+        })
+        return twitterSearch;
     }
 
     init();
