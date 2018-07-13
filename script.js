@@ -116,6 +116,13 @@ $(document).ready(function () {
 
         })
 
+        $('body').on("click", ".btnBackToPlayers", function (e) {
+            $(".stats-container").remove();
+            console.log(e);
+            showPlayers(filterConference(nbaTeams, conference), e.target.id)
+
+        })
+
         //Sorting by Ranking 15-1
         $('body').on("click", ".btnRankingDown", function (e) {
             $(".navbar").remove();
@@ -437,34 +444,54 @@ $(document).ready(function () {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
         let player = teamPlayers[0].players.filter(p => p.name == playerFilter);
         let statsPlayer = player[0].stats.filter(s => s);
-        let statsContainerDiv = $("<div class='container-fluid stats-container'>").appendTo("body");
+        let statsContainerDiv = $(`<div class='container-fluid stats-container container-${teamPlayers[0].conference}'>`).appendTo("body");
         let statsRowDiv = $("<div class='row'>").appendTo(statsContainerDiv);
-        let playerSearch = getSearchTwitter(player[0].name);
-        console.log(playerSearch);
-        statsRowDiv.append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Twitter Feeds:</h5>"))
-            .append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Players Stats:</h5>")))
-            .append($("<div class='col-4 col-sm-4 col-md-4 col-lg-4'>").append($("<h5>Youtube Feeds:</h5>"))
-                .append($(`<iframe src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights' height='600' width='700'></iframe>`))))
+        // let playerSearch = getSearchTwitter(player[0].name);  //// for Twitter API
+        statsRowDiv.append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h5>Players Stats:</h5>"))
+            .append($(`<div class='card-body card-${team.replace(/\s/g, "")} card-body-${teamPlayers[0].conference}'>`)
+                .append($(`<img name='player' src='${player[0].img}'/>`).addClass(`image-card-body`))
+                .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${player[0].name}`).addClass("card-body-text"))
+                .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${player[0].nationality}`).addClass("card-body-text"))
+                .append($("<p>").text("Position").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${player[0].position}`).addClass("card-body-text"))
+                .append($("<p>").text("PTS").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${statsPlayer[0].PTS}`).addClass("card-body-text"))
+                .append($("<p>").text("AST").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${statsPlayer[0].AST}`).addClass("card-body-text"))
+                .append($("<p>").text("REB").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${statsPlayer[0].REB}`).addClass("card-body-text"))
+                .append($("<p>").text("STL").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${statsPlayer[0].STL}`).addClass("card-body-text"))
+                .append($("<p>").text("BLK").addClass("card-body-text text-prop"))
+                .append($("<p>").text(`${statsPlayer[0].BLK}`).addClass("card-body-text"))))
+            .append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h5>Youtube Feeds:</h5>"))
+                .append($(`<iframe class='player-iframe' src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights'></iframe>`))
+                .append($(`<i id='${teamPlayers[0].name}' class='fas fa-arrow-circle-left btnBackToPlayers'><span id='${teamPlayers[0].name}' class='paraBack btnBackToPlayers'>Back</span></i>`)))
         console.log(statsPlayer);
 
     }
 
-    function getSearchTwitter(name) {
-        let twitterSearch;
-        $.ajax({
-            method: "GET",
-            url: (`https://api.twitter.com/1.1/search/tweets.json?q=${name}&result_type=popular`),
-            async: false,
-            success: function (data) {
-                twitterSearch = data;
-            },
-            error: function (data) {
-                console.log("Error");
-            }
 
-        })
-        return twitterSearch;
-    }
+    /******************************* Twitter API ******************************************/
+
+    // function getSearchTwitter(name) {
+    //     let twitterSearch;
+    //     $.ajax({
+    //         method: "GET",
+    //         url: (`https://api.twitter.com/1.1/search/tweets.json?q=${name}&result_type=popular`),
+    //         async: false,
+    //         success: function (data) {
+    //             twitterSearch = data;
+    //         },
+    //         error: function (data) {
+    //             console.log("Error");
+    //         }
+
+    //     })
+    //     return twitterSearch;
+    // }
 
     init();
 

@@ -277,8 +277,14 @@ html,body{
 .paraBack{
     padding-left: 0.3%;
 }
+
 .modal-player-name-text{
     font-size: 0.7vw;
+}
+
+.player-iframe{
+    height: 800px;
+    width: 900px;
 }
 
 /*Team Colors On Card Hover :
