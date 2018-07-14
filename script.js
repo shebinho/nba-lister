@@ -130,7 +130,6 @@ $(document).ready(function () {
         $('body').on("click", ".btnBackToPlayers", function (e) {
             $(".stats-container").remove();
             $('.container-players').remove();
-            console.log(e);
             showPlayers(filterConference(nbaTeams, conference), e.target.id)
 
         })
@@ -492,8 +491,7 @@ $(document).ready(function () {
                 .append($("<p>").text(`${statsPlayer[0].BLK}`).addClass("card-body-text"))))
             .append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h2>Youtube Feeds:</h2>"))
                 .append($(`<iframe class='player-iframe' src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights'></iframe>`))
-                .append($(`<i id='${teamPlayers[0].name}' class='fas fa-arrow-circle-left btnBackToPlayers'><span id='${teamPlayers[0].name}' class='paraBack btnBackToPlayers'>Back</span></i>`)))
-        console.log(statsPlayer);
+                .append($(`<i id='${teamPlayers[0].name}' class='fas fa-arrow-circle-left btnBackToPlayers'><span id='${teamPlayers[0].name}' class='paraBack btnBackToPlayers'>Back</span></i>`)));
 
     }
 
