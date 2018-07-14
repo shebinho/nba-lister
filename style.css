@@ -293,14 +293,15 @@ html,body{
     padding-left: 0.3%;
 }
 
+.player-iframe{
+    height: 55vh;
+    width: 45vw;
+}
+
 .modal-player-name-text{
     font-size: 0.7vw;
 }
 
-.player-iframe{
-    height: 800px;
-    width: 900px;
-}
 
 /*Team Colors On Card Hover :
 /***************** EAST **********************
@@ -441,6 +442,8 @@ html,body{
     background-color: var(--utah-jazz-color);
     border: solid 10px #F9A01B;
 }
+
+
 
 
 

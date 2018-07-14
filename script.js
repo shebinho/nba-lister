@@ -89,6 +89,7 @@ $(document).ready(function () {
 
         // When Modal is closed
         $(".modal").on("hidden.bs.modal", function () {
+            $(".alert-compare").html("");
             $(".column-playerOne").html("");
             $(".column-playerTwo").html("");
 
@@ -473,22 +474,15 @@ $(document).ready(function () {
         statsRowDiv.append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h2>Players Stats:</h2>"))
             .append($(`<div class='card-body card-${team.replace(/\s/g, "")} card-body-${teamPlayers[0].conference}'>`)
                 .append($(`<img name='player' src='${player[0].img}'/>`).addClass(`image-card-body`))
-                .append($("<p>").text("Player Name").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${player[0].name}`).addClass("card-body-text"))
-                .append($("<p>").text("Nationality").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${player[0].nationality}`).addClass("card-body-text"))
-                .append($("<p>").text("Position").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${player[0].position}`).addClass("card-body-text"))
-                .append($("<p>").text("PTS").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${statsPlayer[0].PTS}`).addClass("card-body-text"))
-                .append($("<p>").text("AST").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${statsPlayer[0].AST}`).addClass("card-body-text"))
-                .append($("<p>").text("REB").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${statsPlayer[0].REB}`).addClass("card-body-text"))
-                .append($("<p>").text("STL").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${statsPlayer[0].STL}`).addClass("card-body-text"))
-                .append($("<p>").text("BLK").addClass("card-body-text text-prop"))
-                .append($("<p>").text(`${statsPlayer[0].BLK}`).addClass("card-body-text"))))
+                .append($("<p>").text(`${player[0].name}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`Nationality: ${player[0].nationality}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`Position: ${player[0].position}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`Stats`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`PTS: ${statsPlayer[0].PTS}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`AST: ${statsPlayer[0].AST}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`REB: ${statsPlayer[0].REB}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`STL: ${statsPlayer[0].STL}`).addClass("card-body-text text-prop"))
+                .append($("<p>").text(`BLK: ${statsPlayer[0].BLK}`).addClass("card-body-text text-prop"))))
             .append($("<div class='col-6 col-sm-6 col-md-6 col-lg-6'>").append($("<h2>Youtube Feeds:</h2>"))
                 .append($(`<iframe class='player-iframe' src='https://www.youtube.com/embed?listType=search&list=${player[0].name} highlights'></iframe>`))
                 .append($(`<i id='${teamPlayers[0].name}' class='fas fa-arrow-circle-left btnBackToPlayers'><span id='${teamPlayers[0].name}' class='paraBack btnBackToPlayers'>Back</span></i>`)));
