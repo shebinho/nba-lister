@@ -426,8 +426,10 @@ $(document).ready(function () {
     // Function to Show the Players
     function showPlayers(nbaTeams, team) {
         let teamPlayers = nbaTeams.filter(t => t.name == team);
-        let firstTeam = $(`<button class="btn btn-block">`).html("Starters");
-        let subs = $(`<button class="btn btn-block">`).html("Substitutions");
+        let startersTextDiv = $("<div>").addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12");
+        let substitutionsTextDiv = $("<div>").addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12");
+        let firstTeam = $(`<h2 class="starters-header d-flex justify-content-center">Starters</h2>`).appendTo(startersTextDiv);
+        let subs = $(`<h2 class="subs-header d-flex justify-content-center">Substitutions</h2>`).appendTo(substitutionsTextDiv);
         let containerTeams = $("<div>").attr({ "id": team })
             .addClass(`container-fluid container-${teamPlayers[0].conference} container-players`)
             .appendTo("body");
@@ -438,12 +440,12 @@ $(document).ready(function () {
 
             element.players.forEach((element, index) => {
                 if (index == 0) {
-                    firstTeam.appendTo(rowDiv);
+                    startersTextDiv.appendTo(rowDiv);
                 }
                 if (index == 5) {
-                    subs.appendTo(rowDiv);
+                    substitutionsTextDiv.appendTo(rowDiv);
                 }
-                showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-3").appendTo(rowDiv);
+                showTeamsDiv = $("<div>").addClass("col-xs-6 col-sm-4 col-md-4 col-lg-4").appendTo(rowDiv);
                 cardDiv = $("<div class='card'>").attr("id", element.name).appendTo(showTeamsDiv);
                 bodyCardDiv = $(`<div class='card-body card-${team.replace(/\s/g, "")} card-body-${teamPlayers[0].conference}'>`).appendTo(cardDiv);
 

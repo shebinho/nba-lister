@@ -178,6 +178,7 @@ html,body{
 .card{
     padding-top: 3%;
     background-color: transparent;
+    border: none;
 }
 
 .img-pos{
@@ -231,6 +232,20 @@ html,body{
     padding-left: 5%;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.starters-header{
+    color: #ecf0f1;
+    font-size: 3.0vw;
+    font-family: 'Graduate', cursive;
+    font-weight: bold;
+}
+.subs-header{
+    color: #ecf0f1;
+    font-size: 3.0vw;
+    font-family: 'Graduate', cursive;
+    font-weight: bold;
+    margin-top: 3%;
 }
 
 .text-prop{
